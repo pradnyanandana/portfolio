@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = (props) => {
     return (
-        <section className="hero-3 py-24 lg:py-40">
+        <section className="hero-3 pt-32 pb-12 lg:pb-40 lg:pt-48">
             <div className="container px-4 mx-auto">
                 <div className="flex flex-wrap items-center -mx-3">
                     <div className="w-full lg:w-2/5 px-3">
@@ -16,9 +16,9 @@ const Hero = (props) => {
                             <a className="tracking-wide hover-up-2 block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-base text-white text-center font-semibold font-roboto leading-none bg-orange-500 hover:bg-yellow-600 uppercase rounded-xl wow animate__ animate__fadeInUp animated visible" href="#key-features">About Me</a>
                         </div>
                     </div>
-                    <div className="w-full lg:w-3/5 px-3 mb-12 lg:mb-0">
-                        <div className="lg:h-128 flex items-center justify-center">
-                            <img className="lg:max-w-lg" src="assets/imgs/illustrations/work-tv.png" alt=""/>
+                    <div className="w-full lg:w-3/5 px-3 my-12 lg:my-0">
+                        <div className="flex items-center justify-end">
+                            <img className="lg:max-w-lg" src="images/placeholder-1.jpeg" alt=""/>
                         </div>
                     </div>
                 </div>
