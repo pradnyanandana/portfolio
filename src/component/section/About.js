@@ -2,10 +2,10 @@ import React from "react";
 
 const About = (props) => {
     return (
-        <section className="skewed-bottom-right">
+        <section id="about" className="skewed-bottom-right">
             <div className="bg-gray-50 pt-12 lg:pt-20 pb-20 radius-for-skewed">
-                <div className="container mx-auto px-4">
-                    <div className="flex flex-wrap -mx-4">
+                <div className="container mx-auto px-2 md:px-4">
+                    <div className="flex flex-wrap flex-col-reverse lg:flex-row -mx-4">
                         <div className="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
                             <div className="w-full text-center lg:text-left">
                                 <div className="max-w-md mx-auto mb-8 lg:mx-0">
@@ -23,10 +23,11 @@ const About = (props) => {
                             </div>
                         </div>
                         <div className="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
-                            <div className="w-full text-center lg:text-left">
-                                <div className="lg:h-128 flex items-center justify-end">
-                                    <img className="lg:max-w-lg" src="images/placeholder-2.jpeg" alt=""/>
+                            <div className="w-full text-center">
+                                <div className="lg:h-128 flex items-center justify-center">
+                                    <img className="lg:max-w-lg" src="images/placeholder-2.png" alt=""/>
                                 </div>
+                                <a href='https://www.freepik.com/vectors/people'>People vector created by syarifahbrit - www.freepik.com</a>
                             </div>
                         </div>
                     </div>

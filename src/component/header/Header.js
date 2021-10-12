@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn } from "react-icons/fa";
 import {FiAlignRight, FiX} from "react-icons/fi";
+import {Link} from 'react-scroll'
 
 const Header = (props) => {
     const [openMenu, setOpenMenu] = useState(false);
@@ -24,19 +25,19 @@ const Header = (props) => {
 
     return (
         <header className="header-area absolute z-50 top-0 bloc w-full bg-transparent">
-            <div className="header-wrapper container mx-auto px-4 py-3 xl:py-5 flex justify-between items-center flex-wrap">
+            <div className="header-wrapper container mx-auto px-2 md:px-4 py-3 xl:py-5 flex justify-between items-center flex-wrap">
                 <div className="header-left flex items-center">
                     <div className="header-logo block">
                         <img src="logo-header512.png" className="h-10 xl:h-16"/>
                     </div>
                     <nav className="main-menu-nav absolute xl:relative ml-20 xl:block">
-                        <ul className={`main-menu block fixed top-0 ${openMenu ? "right-0" : "-right-full"} h-full w-4/6 z-40 py-10 px-8 bg-gray-900 xl:w-auto xl:h-auto xl:bg-transparent xl:p-0 xl:m-0 xl:flex xl:flex-wrap xl:justify-end xl:relative xl:right-0 xl:flex`}>
-                            <li className="py-2 xl:py-0 xl:ml-0 xl:mr-5 relative font-rubik"><a data-content=" " className={`relative text-white xl:text-gray-900 font-semibold p-0 xl:py-5  text-xl xl:text-lg ${CurentMenuAfterClass}`} href="#home">Home</a></li>
-                            <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik"><a data-content=" " className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg" href="#about">About</a></li>
-                            <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik"><a data-content=" " className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg" href="#service">Service</a></li>
-                            <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik"><a data-content=" " className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg" href="#portfolio">Portfolio</a></li>
-                            <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik"><a data-content=" " className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg" href="#blog">Blog</a></li>
-                            <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik"><a data-content=" " className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg" href="#contact">Contact</a></li>
+                        <ul className={`main-menu block fixed top-0 ${openMenu ? "right-0" : "-right-full"} h-full w-4/6 z-40 py-10 px-8 bg-gray-900 xl:w-auto xl:h-auto xl:bg-transparent xl:p-0 xl:m-0 xl:flex xl:flex-wrap xl:justify-end xl:relative xl:right-0 xl:flex transition-all`}>
+                            <li className="py-2 xl:py-0 xl:ml-0 xl:mr-5 relative font-rubik cursor-pointer"><a data-content=" " className={`relative text-white xl:text-gray-900 font-semibold p-0 xl:py-5  text-xl xl:text-lg ${CurentMenuAfterClass}`} href="#home">Home</a></li>
+                            <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik cursor-pointer"><Link to="about" spy={true} smooth={true} className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg">About</Link></li>
+                            <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik cursor-pointer"><Link to="service" spy={true} smooth={true} className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg">Service</Link></li>
+                            <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik cursor-pointer"><a data-content=" " className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg" href="#portfolio">Portfolio</a></li>
+                            <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik cursor-pointer"><a data-content=" " className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg" href="#blog">Blog</a></li>
+                            <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik cursor-pointer"><a data-content=" " className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg" href="#contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
