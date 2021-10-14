@@ -5,6 +5,7 @@ import Hero from "./component/section/Hero";
 import About from "./component/section/About"
 import Service from "./component/section/Service";
 import Footer from "./component/footer/Footer";
+import Project from "./component/section/Project";
 import "./App.css";
 
 const App = (props) => {
@@ -15,6 +16,7 @@ const App = (props) => {
             <Hero />
             <About />
             <Service />
+            <Project />
             <Footer />
         </Fragment>
     );
