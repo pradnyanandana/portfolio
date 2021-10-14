@@ -42,7 +42,7 @@ const Header = (props) => {
                         <img src="logo-header512.png" className="h-10 xl:h-16"/>
                     </div>
                     <nav className="main-menu-nav absolute xl:relative ml-20 xl:block">
-                        <ul className={`main-menu block fixed top-0 ${openMenu ? "right-0" : "-right-full"} h-full w-4/6 z-40 py-10 px-8 bg-gray-900 xl:w-auto xl:h-auto xl:bg-transparent xl:p-0 xl:m-0 xl:flex xl:flex-wrap xl:justify-end xl:relative xl:right-0 xl:flex transition-all`}>
+                        <ul className={`main-menu block fixed top-0 ${openMenu ? "right-0" : "-right-full"} h-screen w-4/6 z-40 py-10 px-8 bg-gray-900 xl:w-auto xl:h-auto xl:bg-transparent xl:p-0 xl:m-0 xl:flex xl:flex-wrap xl:justify-end xl:relative xl:right-0 xl:flex transition-all`}>
                             <li className="py-2 xl:py-0 xl:ml-0 xl:mr-5 relative font-rubik cursor-pointer"><a data-content=" " className={`relative text-white xl:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg ${CurentMenuAfterClass}`} href="#home">Home</a></li>
                             <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik cursor-pointer"><Link to="about" spy={true} smooth={true} className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg">About</Link></li>
                             <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik cursor-pointer"><Link to="service" spy={true} smooth={true} className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg">Service</Link></li>
