@@ -18,7 +18,7 @@ const About = (props) => {
                             <div className="w-full text-center lg:text-left">
                                 <div className="mx-auto mb-8 lg:mx-0">
                                     <span class="inline-block text-xs py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">About Me</span>
-                                    <h2 class="max-w-lg mx-auto mb-4 text-3xl xl:text-4xl my-3 font-bold font-rubik wow animate__ animate__fadeInUp animated animated visible">
+                                    <h2 class="mx-auto mb-4 text-3xl xl:text-4xl my-3 font-bold font-rubik wow animate__ animate__fadeInUp animated animated visible">
                                         <span>2+ Years Experiences in Software Development</span>
                                     </h2>
                                     <p class="text-lg text-blueGray-400 font-roboto wow animate__ animate__fadeInUp animated animated visible">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>

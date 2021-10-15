@@ -23,19 +23,19 @@ const Hero = (props) => {
                 <div className="flex h-full flex-col-reverse justify-center sm:flex-row items-center -mx-3">
                     <div className="w-full sm:w-2/5 px-3">
                         <div className="max-w-lg sm:max-w-md mx-auto sm:mx-0 mb-8 text-center sm:text-left">
-                            <h2 className="text-3xl xl:text-6xl mb-4 leading-tight lg:leading-tight font-bold font-rubik wow animate__ animate__fadeIn animated visible">
+                            <h2 className="text-3xl xl:text-6xl mb-4 leading-tight xl:leading-tight font-bold font-rubik wow animate__ animate__fadeIn animated visible">
                                 Hi, I'm Pradnya. <br/>a Professional <TextLoop>{rotatingText.map((text, index) => (<span key={`rotating-text-${index}`} className="bg-orange-500 rounded-xl text-white px-3">{text}</span>))}</TextLoop> Developer.
                             </h2>
                         </div>
                     </div>
                     <div className="w-full sm:w-3/5 px-3 mb-12 sm:mb-0">
                         <div className="flex items-center justify-end">
-                            <Lottie 
+                            {/* <Lottie 
                                 options={defaultOptions}
                                 height={"auto"}
                                 width={"100%"}
                                 style={{marginLeft: "auto", marginRight: 0}}
-                            />
+                            /> */}
                         </div>
                     </div>
                 </div>
