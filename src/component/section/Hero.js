@@ -30,12 +30,12 @@ const Hero = (props) => {
                     </div>
                     <div className="w-full sm:w-3/5 px-3 mb-12 sm:mb-0">
                         <div className="flex items-center justify-end">
-                            {/* <Lottie 
+                            <Lottie 
                                 options={defaultOptions}
                                 height={"auto"}
                                 width={"100%"}
                                 style={{marginLeft: "auto", marginRight: 0}}
-                            /> */}
+                            />
                         </div>
                     </div>
                 </div>
