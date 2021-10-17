@@ -16,6 +16,7 @@ module.exports = {
           '700-transparent': '#C48D33'
         },
         blue: {
+          '300-transparent': '#ACF1FF50',
           '500-transparent': '#ACF1FF',
           '700-transparent': '#2C9BB5'
         },
