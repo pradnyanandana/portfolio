@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {Fragment, useState} from "react";
 
 const ActiveClass =  'text-white bg-orange-500 hover:bg-yellow-600';
 
@@ -8,6 +8,39 @@ const Filter = [
     {key: 'backend', text: 'Backend Development'},
     {key: 'wordpress', text: 'WordPress Development'},
 ];
+
+const ProjectList = [
+    {
+        filter: 'wordpress',
+        title: 'Lorem Ipsum',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+        image: 'images/placeholder-1.jpeg'
+    },
+    {
+        filter: 'wordpress',
+        title: 'Lorem Ipsum',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+        image: 'images/placeholder-1.jpeg'
+    },
+    {
+        filter: 'wordpress',
+        title: 'Lorem Ipsum',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+        image: 'images/placeholder-1.jpeg'
+    },
+    {
+        filter: 'web',
+        title: 'Lorem Ipsum',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+        image: 'images/placeholder-1.jpeg'
+    },
+    {
+        filter: 'backend',
+        title: 'Lorem Ipsum',
+        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
+        image: 'images/placeholder-1.jpeg'
+    }
+]
 
 const Project = (props) => {
     const [active, setActive] = useState('all');
@@ -39,8 +72,27 @@ const Project = (props) => {
                         ))}
                     </ul>
                 </div>
+                <div className="flex flex-wrap -mx-3 -mb-6">
+                    <List active={active}/>
+                </div>
             </div>
         </section>
+    )
+}
+
+const List = ({active}) => {
+    return (
+        <Fragment>
+            {ProjectList.map((val, i) => (
+                (active === 'all' || val.filter === active) &&
+                <div key={`list-${i}`} className="w-full lg:w-1/3 px-3 mb-6">
+                    <div className=" group relative rounded-3xl transition duration-500 wow animate__ animate__fadeInUp animated visible overflow-hidden">
+                        <img className="" src={val.image} alt=""/>
+                        <div className="absolute h-full w-full top-0 bottom-0 bg-white opacity-0 group-hover:opacity-100" style={{'--tw-bg-opacity': 0.5}}></div>
+                    </div>
+                </div>
+            ))}
+        </Fragment>
     )
 }
 
