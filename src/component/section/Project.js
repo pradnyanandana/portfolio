@@ -11,31 +11,31 @@ const Filter = [
 
 const ProjectList = [
     {
-        filter: 'wordpress',
+        filter: 'WordPress',
         title: 'Lorem Ipsum',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
         image: 'images/placeholder-1.jpeg'
     },
     {
-        filter: 'wordpress',
+        filter: 'WordPress',
         title: 'Lorem Ipsum',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
         image: 'images/placeholder-1.jpeg'
     },
     {
-        filter: 'wordpress',
+        filter: 'WordPress',
         title: 'Lorem Ipsum',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
         image: 'images/placeholder-1.jpeg'
     },
     {
-        filter: 'web',
+        filter: 'Web',
         title: 'Lorem Ipsum',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
         image: 'images/placeholder-1.jpeg'
     },
     {
-        filter: 'backend',
+        filter: 'Backend',
         title: 'Lorem Ipsum',
         description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
         image: 'images/placeholder-1.jpeg'
@@ -67,7 +67,7 @@ const Project = (props) => {
                     <ul className="filters block md:flex md:flex-wrap md:justify-between">
                         {Filter.map((val) => (
                             <li key={val.key} className="btn inline-block rounded-xl">
-                                <a className={`block text-base text-center font-semibold font-roboto rounded-3xl py-2 px-4 ${val.key === active ? ActiveClass : ''}`} onClick={e => ChangeFilter(val.key)}>{val.text}</a>
+                                <a className={`block text-base text-center font-semibold font-roboto rounded-3xl py-2 px-4 ${val.key === active ? ActiveClass : ''}`} onClick={e => ChangeFilter(val.key.toLowerCase())}>{val.text}</a>
                             </li>
                         ))}
                     </ul>
@@ -84,11 +84,15 @@ const List = ({active}) => {
     return (
         <Fragment>
             {ProjectList.map((val, i) => (
-                (active === 'all' || val.filter === active) &&
+                (active === 'all' || val.filter.toLowerCase() === active) &&
                 <div key={`list-${i}`} className="w-full lg:w-1/3 px-3 mb-6">
                     <div className=" group relative rounded-3xl transition duration-500 wow animate__ animate__fadeInUp animated visible overflow-hidden">
                         <img className="" src={val.image} alt=""/>
-                        <div className="absolute h-full w-full top-0 bottom-0 bg-white opacity-0 group-hover:opacity-100" style={{'--tw-bg-opacity': 0.5}}></div>
+                        <div className="transition-all absolute p-8 w-full left-0 -bottom-full bg-white opacity-0 group-hover:opacity-100 group-hover:bottom-0">
+                            <span className="inline-block text-xs py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">{val.filter}</span>
+                            <h3 className="my-3 font-bold font-heading text-2xl font-rubik">{val.title}</h3>
+                            <p className="text-sm text-blueGray-400 font-roboto">{val.description}</p>
+                        </div>
                     </div>
                 </div>
             ))}

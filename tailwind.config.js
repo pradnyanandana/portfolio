@@ -6,31 +6,31 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
-      'xs': '350px',
+      xs: "350px",
       ...defaultTheme.screens,
     },
     extend: {
       colors: {
         yellow: {
-          '500-transparent': '#FEEDCE',
-          '700-transparent': '#C48D33'
+          "500-transparent": "#FEEDCE",
+          "700-transparent": "#C48D33",
         },
         blue: {
-          '300-transparent': '#ACF1FF50',
-          '500-transparent': '#ACF1FF',
-          '700-transparent': '#2C9BB5'
+          "300-transparent": "#ACF1FF50",
+          "500-transparent": "#ACF1FF",
+          "700-transparent": "#2C9BB5",
         },
         purple: {
-          '500-transparent': '#D5D4FF',
-          '700-transparent': '#605EB1'
+          "500-transparent": "#D5D4FF",
+          "700-transparent": "#605EB1",
         },
         orange: {
-          '500': '#FE8A36'
-        }
+          500: "#FE8A36",
+        },
       },
       fontFamily: {
-        'rubik': ['Rubik', 'sans-serif'],
-        'roboto': ['Roboto', 'sans-serif']
+        rubik: ["Rubik", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
       },
     },
   },
@@ -284,6 +284,9 @@ module.exports = {
     width: ["before", "after", "responsive"],
     wordBreak: ["before", "after", "responsive"],
     zIndex: ["before", "after", "responsive", "focus-within", "focus"],
+    extend: {
+      inset: ["group-hover"],
+    },
   },
   plugins: [
     plugin(({ addVariant, e }) => {
