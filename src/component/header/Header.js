@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from "react";
-import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn } from "react-icons/fa";
-import {FiAlignRight, FiX} from "react-icons/fi";
+import React, {useState, useEffect} from 'react';
+import {FaTwitter ,FaInstagram ,FaFacebookF , FaLinkedinIn } from 'react-icons/fa';
+import {FiAlignRight, FiX} from 'react-icons/fi';
 import {Link} from 'react-scroll';
 
 const SocialShare = [
@@ -10,11 +10,19 @@ const SocialShare = [
     {Social: <FaTwitter /> , link: 'https://twitter.com/'},
 ];
 
-const CurentMenuAfterClass = "after:content after:w-full after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-orange-500";
+const Menu = [
+    {link: 'hero', text: 'Home'},
+    {link: 'about', text: 'About'},
+    {link: 'service', text: 'Service'},
+    {link: 'project', text: 'Portfolio'},
+]
+
+const CurrentMenuAfterClass = "after:content after:w-full after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-orange-500";
 
 const Header = (props) => {
     const [openMenu, setOpenMenu] = useState(false);
-    const [headerBgOpacity, setHeaderBgOpacity] = useState("0");
+    const [headerBgOpacity, setHeaderBgOpacity] = useState('0');
+    const [activeMenu, setActiveMenu] = useState('hero');
 
     const OpenMenu = () => {
         setOpenMenu(true);
@@ -42,13 +50,14 @@ const Header = (props) => {
                         <img src="logo-header512.png" className="h-10 xl:h-16"/>
                     </div>
                     <nav className="main-menu-nav absolute xl:relative ml-20 xl:block">
-                        <ul className={`main-menu block fixed top-0 ${openMenu ? "right-0" : "-right-full"} h-screen w-4/6 z-40 py-10 px-8 bg-gray-900 xl:w-auto xl:h-auto xl:bg-transparent xl:p-0 xl:m-0 xl:flex xl:flex-wrap xl:justify-end xl:relative xl:right-0 xl:flex transition-all`}>
-                            <li className="py-2 xl:py-0 xl:ml-0 xl:mr-5 relative font-rubik cursor-pointer"><a data-content=" " className={`relative text-white xl:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg ${CurentMenuAfterClass}`} href="#home">Home</a></li>
-                            <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik cursor-pointer"><Link to="about" spy={true} smooth={true} className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg">About</Link></li>
-                            <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik cursor-pointer"><Link to="service" spy={true} smooth={true} className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg">Service</Link></li>
-                            <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik cursor-pointer"><a data-content=" " className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg" href="#portfolio">Portfolio</a></li>
-                            <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik cursor-pointer"><a data-content=" " className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg" href="#blog">Blog</a></li>
-                            <li className="py-2 xl:py-0 xl:mx-3 relative font-rubik cursor-pointer"><a data-content=" " className="relative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg" href="#contact">Contact</a></li>
+                        <ul className={`main-menu block fixed top-0 ${openMenu ? "right-0" : "-right-full"} h-screen w-4/6 z-40 py-10 px-8 bg-gray-900 xl:w-auto xl:h-auto xl:bg-transparent xl:p-0 xl:m-0 xl:flex xl:flex-wrap xl:justify-end xl:relative xl:right-0 xl:flex transition-all duration-300`}>
+                            {Menu.map(e => (
+                                <li key={e.link} className="py-2 xl:py-0 xl:mx-3 relative font-rubik cursor-pointer">
+                                    <Link to={e.link} spy={true} smooth={true} activeClass={CurrentMenuAfterClass} className="elative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg">
+                                        {e.text}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </nav>
                 </div>
@@ -65,8 +74,8 @@ const Header = (props) => {
                             <span>Hire Me</span>
                         </a>
                     </div>
-                    <div className="hamburger-menu block xl:hidden pl-3 xs:pl-6" onClick={OpenMenu}>
-                        <span className="text-lg">
+                    <div className="hamburger-menu block xl:hidden p-2 bg-gray-900 rounded-xl ml-3 xs:ml-5" onClick={OpenMenu}>
+                        <span className="text-lg text-white">
                             <FiAlignRight size={24}/>
                         </span>
                     </div>
