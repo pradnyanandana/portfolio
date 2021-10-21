@@ -3,7 +3,7 @@ import React from "react";
 const About = (props) => {
     return (
         <section id="about" className="skewed-bottom-right">
-            <div className="bg-gray-50 pt-12 lg:pt-20 pb-20 radius-for-skewed">
+            <div className="bg-indigo-50 pt-12 lg:pt-20 pb-20 radius-for-skewed">
                 <div className="container mx-auto px-2 md:px-4">
                     <div className="flex flex-col lg:flex-row -mx-4">
                         <div className="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
@@ -11,7 +11,7 @@ const About = (props) => {
                                 <div className="lg:h-128 flex items-center justify-center">
                                     <img className="lg:max-w-lg" src="images/placeholder-2.png" alt=""/>
                                 </div>
-                                <a href='https://www.freepik.com/vectors/people'>People vector created by syarifahbrit - www.freepik.com</a>
+                                <a href="https://www.freepik.com/vectors/people">People vector creted by syarifahbrit - www.freepik.com</a>
                             </div>
                         </div>
                         <div className="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
@@ -21,7 +21,7 @@ const About = (props) => {
                                     <h2 className="mx-auto mb-4 text-3xl xl:text-4xl my-3 font-bold font-rubik wow animate__ animate__fadeInUp animated animated visible">
                                         <span>2+ Years Experiences in Software Development</span>
                                     </h2>
-                                    <p className="text-lg text-blueGray-400 font-roboto wow animate__ animate__fadeInUp animated animated visible">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
+                                    <p className="text-lg font-roboto wow animate__ animate__fadeInUp animated animated visible">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
                                 </div>
                                 <div className="mx-auto lg:mx-0">
                                     <div className="text-center lg:text-left">
@@ -34,7 +34,7 @@ const About = (props) => {
                 </div>
             </div>
             <div className="mr-for-radius">
-                <svg className="h-8 md:h-12 lg:h-20 w-full text-gray-50" viewBox="0 0 10 10" preserveAspectRatio="none">
+                <svg className="h-8 md:h-12 lg:h-20 w-full text-indigo-50" viewBox="0 0 10 10" preserveAspectRatio="none">
                     <polygon fill="currentColor" points="0 0 10 0 0 10"></polygon>
                 </svg>
             </div>

@@ -8,6 +8,7 @@ const Filter = [
     {key: 'web', text: 'Web Development'},
     {key: 'backend', text: 'Backend Development'},
     {key: 'wordpress', text: 'WordPress Development'},
+    {key: 'other', text: 'Others'},
 ];
 
 const ProjectList = [
@@ -64,7 +65,7 @@ const Project = (props) => {
                         <p className="mx-auto text-lg text-blueGray-400 font-roboto wow animate__ animate__fadeInUp animated animated visible">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
                     </div>
                 </div>
-                <div className="project-filters text-center mb-8 rounded-full md:p-3 md:bg-blue-300-transparent">
+                <div className="project-filters text-center mb-12 rounded-full md:p-3 md:bg-blue-300-transparent">
                     <ul className="filters block md:flex md:flex-wrap md:justify-around">
                         {Filter.map((val) => (
                             <li key={val.key} className="btn inline-block rounded-xl cursor-pointer">

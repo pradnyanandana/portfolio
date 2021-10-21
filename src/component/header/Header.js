@@ -15,6 +15,7 @@ const Menu = [
     {link: 'about', text: 'About'},
     {link: 'service', text: 'Service'},
     {link: 'project', text: 'Portfolio'},
+    {link: 'contact', text: 'Contact'},
 ]
 
 const CurrentMenuAfterClass = "after:content after:w-full after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-orange-500";
@@ -22,7 +23,6 @@ const CurrentMenuAfterClass = "after:content after:w-full after:absolute after:l
 const Header = (props) => {
     const [openMenu, setOpenMenu] = useState(false);
     const [headerBgOpacity, setHeaderBgOpacity] = useState('0');
-    const [activeMenu, setActiveMenu] = useState('hero');
 
     const OpenMenu = () => {
         setOpenMenu(true);
@@ -52,7 +52,7 @@ const Header = (props) => {
                     <nav className="main-menu-nav absolute xl:relative ml-20 xl:block">
                         <ul className={`main-menu block fixed top-0 ${openMenu ? "right-0" : "-right-full"} h-screen w-4/6 z-40 py-10 px-8 bg-gray-900 xl:w-auto xl:h-auto xl:bg-transparent xl:p-0 xl:m-0 xl:flex xl:flex-wrap xl:justify-end xl:relative xl:right-0 xl:flex transition-all duration-300`}>
                             {Menu.map(e => (
-                                <li key={e.link} className="py-2 xl:py-0 xl:mx-3 relative font-rubik cursor-pointer">
+                                <li key={e.link} className="py-2 table xl:block xl:py-0 xl:mx-3 relative font-rubik cursor-pointer">
                                     <Link to={e.link} spy={true} smooth={true} activeClass={CurrentMenuAfterClass} className="elative text-white xl:text-gray-700 xl:hover:text-gray-900 font-semibold p-0 xl:py-5 text-xl xl:text-lg">
                                         {e.text}
                                     </Link>
