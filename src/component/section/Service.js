@@ -9,7 +9,7 @@ const Service = (props) => {
             <div className="container px-2 md:px-4 mx-auto">
                 <div className="text-center mb-8">
                     <span className="inline-block text-xs py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">What I Offer</span>
-                    <h2 className="max-w-lg mx-auto mb-4 text-3xl xl:text-4xl font-rubik my-3 font-bold font-heading wow animate__ animate__fadeInUp animated animated visible">
+                    <h2 className="max-w-lg mx-auto my-4 text-3xl xl:text-4xl font-rubik font-bold font-heading wow animate__ animate__fadeInUp animated animated visible">
                         <span>App Solutions</span>
                     </h2>
                     <p className="max-w-xl mx-auto text-lg text-blueGray-400 font-roboto wow animate__ animate__fadeInUp animated animated visible">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>

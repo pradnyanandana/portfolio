@@ -1,4 +1,6 @@
 import React from "react";
+import {BsSkype} from "react-icons/bs";
+import {MdEmail, MdLocationPin} from "react-icons/md";
 
 const Contact = (props) => {
     return (
@@ -10,7 +12,21 @@ const Contact = (props) => {
                             <h2 className="mb-4 text-3xl xl:text-4xl font-rubik my-3 font-bold font-heading wow animate__ animate__fadeInUp animated animated visible">
                                 <span>Get In Touch</span>
                             </h2>
-                            <p className="text-lg text-blueGray-400 font-roboto wow animate__ animate__fadeInUp animated animated visible">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
+                            <p className="text-lg text-blueGray-400 mb-4 font-roboto wow animate__ animate__fadeInUp animated animated visible">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
+                            <div className="contact-information">
+                                <span className="flex items-center">
+                                    <BsSkype className="mr-1 text-orange-500"/>
+                                    pradnyanandana
+                                </span>
+                                <span className="flex items-center">
+                                    <MdEmail className="mr-1 text-orange-500"/>
+                                    pradnyanandana@gmail.com
+                                </span>
+                                <span className="flex items-center">
+                                    <MdLocationPin className="mr-1 text-orange-500"/>
+                                    I live in Bali, Indonesia
+                                </span>
+                            </div>
                         </div>
                         <div className="w-full lg:w-1/2 px-4 lg:mb-0">
                             <div className="mb-3 pt-0">
