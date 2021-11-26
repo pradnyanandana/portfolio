@@ -14,16 +14,16 @@ const Contact = (props) => {
                             </h2>
                             <p className="text-lg text-blueGray-400 mb-4 font-roboto wow animate__ animate__fadeInUp animated animated visible">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
                             <div className="contact-information">
-                                <span className="flex items-center">
-                                    <BsSkype className="mr-1 text-orange-500"/>
+                                <span className="flex items-center text-lg mb-2">
+                                    <BsSkype className="mr-2 text-orange-500 text-xl"/>
                                     pradnyanandana
                                 </span>
-                                <span className="flex items-center">
-                                    <MdEmail className="mr-1 text-orange-500"/>
+                                <span className="flex items-center text-lg mb-2">
+                                    <MdEmail className="mr-2 text-orange-500 text-xl"/>
                                     pradnyanandana@gmail.com
                                 </span>
-                                <span className="flex items-center">
-                                    <MdLocationPin className="mr-1 text-orange-500"/>
+                                <span className="flex items-center text-lg">
+                                    <MdLocationPin className="mr-2 text-orange-500 text-xl"/>
                                     I live in Bali, Indonesia
                                 </span>
                             </div>
