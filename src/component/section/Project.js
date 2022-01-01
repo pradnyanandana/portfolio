@@ -1,5 +1,6 @@
 import React, {Fragment, useState} from "react";
 import {CgArrowLongRight} from "react-icons/cg";
+import ProjectPopup from "./ProjectPopup";
 
 const ActiveClass =  'text-white bg-orange-500';
 
@@ -46,6 +47,7 @@ const ProjectList = [
 
 const Project = (props) => {
     const [active, setActive] = useState('all');
+    const [popupActive, setPopupActive] = useState(false);
 
     const ChangeFilter = (key) => {
         setActive(key);
@@ -75,14 +77,21 @@ const Project = (props) => {
                     </ul>
                 </div>
                 <div className="flex flex-wrap -mx-3 -mb-6">
-                    <List active={active}/>
+                    <List 
+                        active={active}
+                        setPopupActive={setPopupActive}
+                    />
                 </div>
             </div>
+            <ProjectPopup
+                popupActive={popupActive}
+                setPopupActive={setPopupActive}
+            />
         </section>
     )
 }
 
-const List = ({active}) => {
+const List = ({active, setPopupActive}) => {
     return (
         <Fragment>
             {ProjectList.map((val, i) => (
@@ -95,7 +104,7 @@ const List = ({active}) => {
                                 <span className="inline-block text-xs mb-3 py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">{val.filter}</span>
                                 <h3 className="mb-3 font-bold font-heading text-2xl font-rubik">{val.title}</h3>
                                 <p className="text-sm text-blueGray-400 font-roboto mb-5">{val.description}</p>
-                                <a className="text-sm text-blueGray-400 font-roboto flex items-center text-yellow-500 cursor-pointer">
+                                <a className="text-sm text-blueGray-400 font-roboto flex items-center text-yellow-500 cursor-pointer" onClick={e => setPopupActive(true)}>
                                     Detail <CgArrowLongRight className="ml-2"></CgArrowLongRight>
                                 </a>
                             </div>

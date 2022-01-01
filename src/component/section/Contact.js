@@ -1,5 +1,5 @@
 import React from "react";
-import {BsSkype} from "react-icons/bs";
+import {RiWhatsappFill} from "react-icons/ri";
 import {MdEmail, MdLocationPin} from "react-icons/md";
 
 const Contact = (props) => {
@@ -15,8 +15,8 @@ const Contact = (props) => {
                             <p className="text-lg text-blueGray-400 mb-4 font-roboto wow animate__ animate__fadeInUp animated animated visible">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
                             <div className="contact-information">
                                 <span className="flex items-center text-lg mb-2">
-                                    <BsSkype className="mr-2 text-orange-500 text-xl"/>
-                                    pradnyanandana
+                                    <RiWhatsappFill className="mr-2 text-orange-500 text-xl"/>
+                                    (+62) 8999 8888 7777
                                 </span>
                                 <span className="flex items-center text-lg mb-2">
                                     <MdEmail className="mr-2 text-orange-500 text-xl"/>
@@ -30,15 +30,15 @@ const Contact = (props) => {
                         </div>
                         <div className="w-full lg:w-1/2 px-4 lg:mb-0">
                             <div className="mb-3 pt-0">
-                                <input type="text" placeholder="Your Name"
+                                <input type="text" placeholder="What is your name?"
                                     className="px-3 py-3 placeholder-gray-400 text-gray-600 relative text-sm border-b border-gray-300 bg-transparent outline-none focus:outline-none w-full" />
                             </div>
                             <div className="mb-3 pt-0">
-                                <input type="text" placeholder="Your Email"
+                                <input type="text" placeholder="Your email address"
                                     className="px-3 py-3 placeholder-gray-400 text-gray-600 relative text-sm border-b border-gray-300 bg-transparent outline-none focus:outline-none w-full" />
                             </div>
                             <div className="mb-6 pt-0">
-                                <textarea rows="4" placeholder="Your Text"
+                                <textarea rows="4" placeholder="How can I help you?"
                                     className="px-3 py-3 placeholder-gray-400 text-gray-600 relative text-sm border-b border-gray-300 bg-transparent outline-none focus:outline-none w-full"></textarea>
                             </div>
                             <div className="text-center lg:text-left">

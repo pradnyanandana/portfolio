@@ -1,9 +1,10 @@
 import React from "react";
-import {FaWordpressSimple} from "react-icons/fa";
-import {MdComputer} from "react-icons/md";
-import {CgDatabase} from "react-icons/cg";
+import { FaWordpressSimple } from "react-icons/fa";
+import { MdComputer } from "react-icons/md";
+import { CgDatabase } from "react-icons/cg";
 
 const Service = (props) => {
+
     return (
         <section id="service" className="pt-16 pb-20">
             <div className="container px-2 md:px-4 mx-auto">
