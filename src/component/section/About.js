@@ -23,10 +23,10 @@ const About = (props) => {
                                         alt=""
                                     />
                                 </div>
-                                <a href="https://www.freepik.com/vectors/people">
+                                {/* <a href="https://www.freepik.com/vectors/people">
                                     People vector creted by syarifahbrit -
                                     www.freepik.com
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                         <div className="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
