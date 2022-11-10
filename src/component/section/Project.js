@@ -12,37 +12,38 @@ const Filter = [
     {key: 'other', text: 'Others'},
 ];
 
+const Background = {
+    web: 'bg-blue-100-transparent',
+    backend: 'bg-yellow-100-transparent',
+    wordpress: 'bg-orange-100-transparent',
+    other: 'bg-purple-100-transparent',
+}
+
 const ProjectList = [
     {
         filter: 'WordPress',
-        title: 'Lorem Ipsum',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        image: 'images/placeholder-1.jpeg'
+        title: 'Gutenverse',
+        description: 'Gutenverse is a WordPress plugin to extend the functionalities of Full Site Editor. It has a lot of blocks that can be used in building content. Also, it has a form management system included in plugin features.',
+        image: 'images/gutenverse.png'
     },
     {
         filter: 'WordPress',
-        title: 'Lorem Ipsum',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        image: 'images/placeholder-1.jpeg'
+        title: 'JNews',
+        description: 'JNews is a premium news and magazine theme for WordPress. In this project, I am tasked to develop various features.',
+        image: 'images/jnews.png'
     },
     {
-        filter: 'WordPress',
-        title: 'Lorem Ipsum',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        image: 'images/placeholder-1.jpeg'
+        filter: 'Other',
+        title: 'House Price Prediction in Denpasar, Bali, Indonesia',
+        description: 'What I do in this project is to analyze features that affect house prices and then make a regression model using Multi Layer Perceptron.',
+        image: 'images/dts-harga-rumah.png'
     },
-    {
-        filter: 'Web',
-        title: 'Lorem Ipsum',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        image: 'images/placeholder-1.jpeg'
-    },
-    {
-        filter: 'Backend',
-        title: 'Lorem Ipsum',
-        description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
-        image: 'images/placeholder-1.jpeg'
-    }
+    // {
+    //     filter: 'Other',
+    //     title: 'Popular Movies',
+    //     description: 'This project is a final project for Indonesia Android Kejar Intermediate. Movies are retrieved using IMDB API.',
+    //     image: 'images/placeholder-1.jpeg'
+    // },
 ]
 
 const Project = (props) => {
@@ -98,8 +99,8 @@ const List = ({active, setPopupActive}) => {
                 (active === 'all' || val.filter.toLowerCase() === active) &&
                 <div key={`list-${i}`} className="w-full lg:w-1/3 px-3 mb-6 transition-all">
                     <div className=" group rounded-3xl transition duration-500 wow animate__ animate__fadeInUp animated visible overflow-hidden">
-                        <div className="relative h-96">
-                            <img className="h-full w-full object-cover" src={val.image} alt=""/>
+                        <div className={`relative h-96 ${Background[val.filter.toLowerCase()]}`}>
+                            <img className="h-full w-full object-scale-down" src={val.image} alt=""/>
                             <div className="transition-all duration-300 absolute rounded-3xl text-left p-8 m-8 w-[calc(100%-4rem)] left-0 -bottom-full bg-white opacity-0 group-hover:opacity-100 group-hover:bottom-0">
                                 <span className="inline-block text-xs mb-3 py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">{val.filter}</span>
                                 <h3 className="mb-3 font-bold font-heading text-2xl font-rubik">{val.title}</h3>

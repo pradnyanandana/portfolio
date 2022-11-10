@@ -15,10 +15,6 @@ const Contact = (props) => {
                             <p className="text-lg text-blueGray-400 mb-4 font-roboto wow animate__ animate__fadeInUp animated animated visible">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
                             <div className="contact-information">
                                 <span className="flex items-center text-lg mb-2">
-                                    <RiWhatsappFill className="mr-2 text-orange-500 text-xl"/>
-                                    (+62) 8999 8888 7777
-                                </span>
-                                <span className="flex items-center text-lg mb-2">
                                     <MdEmail className="mr-2 text-orange-500 text-xl"/>
                                     pradnyanandana@gmail.com
                                 </span>
