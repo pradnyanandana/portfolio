@@ -38,12 +38,12 @@ const ProjectList = [
         description: 'What I do in this project is to analyze features that affect house prices and then make a regression model using Multi Layer Perceptron.',
         image: process.env.PUBLIC_URL + "/images/dts-harga-rumah.png"
     },
-    // {
-    //     filter: 'Other',
-    //     title: 'Popular Movies',
-    //     description: 'This project is a final project for Indonesia Android Kejar Intermediate. Movies are retrieved using IMDB API.',
-    //     image: 'images/placeholder-1.jpeg'
-    // },
+    {
+        filter: 'Other',
+        title: 'Filmy',
+        description: 'This project is a final project for Indonesia Android Kejar Intermediate. Movies are retrieved using IMDB API.',
+        image: process.env.PUBLIC_URL + "/images/filmy.png"
+    },
 ]
 
 const Project = (props) => {
