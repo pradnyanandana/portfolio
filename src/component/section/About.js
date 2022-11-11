@@ -16,13 +16,13 @@ const About = (props) => {
                     <div className="flex flex-col lg:flex-row -mx-4">
                         <div className="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
                             <div className="w-full text-center">
-                                <div className="lg:h-128 flex items-center justify-center">
+                                {/* <div className="lg:h-128 flex items-center justify-center">
                                     <img
                                         className="lg:max-w-lg"
                                         src="images/placeholder-2.png"
                                         alt=""
                                     />
-                                </div>
+                                </div> */}
                                 {/* <a href="https://www.freepik.com/vectors/people">
                                     People vector creted by syarifahbrit -
                                     www.freepik.com
@@ -53,47 +53,47 @@ const About = (props) => {
                                     </span>
                                     <div className="mt-3 flex flex-wrap items-center justify-center lg:justify-start">
                                         <ReactSVG
-                                            src="images/icons/python.svg"
+                                            src="./portfolio/images/icons/python.svg"
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="images/icons/javascript.svg"
+                                            src="./portfolio/images/icons/javascript.svg"
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="images/icons/php.svg"
+                                            src="./portfolio/images/icons/php.svg"
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="images/icons/mysql.svg"
+                                            src="./portfolio/images/icons/mysql.svg"
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="images/icons/postgresql.svg"
+                                            src="./portfolio/images/icons/postgresql.svg"
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="images/icons/laravel.svg"
+                                            src="./portfolio/images/icons/laravel.svg"
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="images/icons/express.svg"
+                                            src="./portfolio/images/icons/express.svg"
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="images/icons/django.svg"
+                                            src="./portfolio/images/icons/django.svg"
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="images/icons/docker.svg"
+                                            src="./portfolio/images/icons/docker.svg"
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="images/icons/react.svg"
+                                            src="./portfolio/images/icons/react.svg"
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="images/icons/wordpress.svg"
+                                            src="./portfolio/images/icons/wordpress.svg"
                                             beforeInjection={svgStyle}
                                         />
                                     </div>

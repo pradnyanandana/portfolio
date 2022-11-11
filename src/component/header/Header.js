@@ -47,7 +47,7 @@ const Header = (props) => {
             <div className="header-wrapper container mx-auto px-2 md:px-4 py-3 xl:py-5 flex justify-between items-center flex-wrap">
                 <div className="header-left flex items-center">
                     <div className="header-logo block">
-                        <img src="logo-header512.png" className="h-10 xl:h-16"/>
+                        <img src="./portfolio/logo-header512.png" className="h-10 xl:h-16"/>
                     </div>
                     <nav className="main-menu-nav absolute xl:relative ml-20 xl:block">
                         <ul className={`main-menu block fixed top-0 ${openMenu ? "right-0" : "-right-full"} h-screen w-4/6 z-40 py-10 px-8 bg-gray-900 xl:w-auto xl:h-auto xl:bg-transparent xl:p-0 xl:m-0 xl:flex xl:flex-wrap xl:justify-end xl:relative xl:right-0 xl:flex transition-all duration-300`}>
