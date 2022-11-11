@@ -53,47 +53,47 @@ const About = (props) => {
                                     </span>
                                     <div className="mt-3 flex flex-wrap items-center justify-center lg:justify-start">
                                         <ReactSVG
-                                            src="./portfolio/images/icons/python.svg"
+                                            src={process.env.PUBLIC_URL + "/images/icons/python.svg"}
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="./portfolio/images/icons/javascript.svg"
+                                            src={process.env.PUBLIC_URL + "/images/icons/javascript.svg"}
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="./portfolio/images/icons/php.svg"
+                                            src={process.env.PUBLIC_URL + "/images/icons/php.svg"}
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="./portfolio/images/icons/mysql.svg"
+                                            src={process.env.PUBLIC_URL + "/images/icons/mysql.svg"}
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="./portfolio/images/icons/postgresql.svg"
+                                            src={process.env.PUBLIC_URL + "/images/icons/postgresql.svg"}
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="./portfolio/images/icons/laravel.svg"
+                                            src={process.env.PUBLIC_URL + "/images/icons/laravel.svg"}
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="./portfolio/images/icons/express.svg"
+                                            src={process.env.PUBLIC_URL + "/images/icons/express.svg"}
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="./portfolio/images/icons/django.svg"
+                                            src={process.env.PUBLIC_URL + "/images/icons/django.svg"}
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="./portfolio/images/icons/docker.svg"
+                                            src={process.env.PUBLIC_URL + "/images/icons/docker.svg"}
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="./portfolio/images/icons/react.svg"
+                                            src={process.env.PUBLIC_URL + "/images/icons/react.svg"}
                                             beforeInjection={svgStyle}
                                         />
                                         <ReactSVG
-                                            src="./portfolio/images/icons/wordpress.svg"
+                                            src={process.env.PUBLIC_URL + "/images/icons/wordpress.svg"}
                                             beforeInjection={svgStyle}
                                         />
                                     </div>

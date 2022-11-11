@@ -24,19 +24,19 @@ const ProjectList = [
         filter: 'WordPress',
         title: 'Gutenverse',
         description: 'Gutenverse is a WordPress plugin to extend the functionalities of Full Site Editor. It has a lot of blocks that can be used in building content. Also, it has a form management system included in plugin features.',
-        image: './portfolio/images/gutenverse.png'
+        image: process.env.PUBLIC_URL + "/images/gutenverse.png"
     },
     {
         filter: 'WordPress',
         title: 'JNews',
         description: 'JNews is a premium news and magazine theme for WordPress. In this project, I am tasked to develop various features.',
-        image: './portfolio/images/jnews.png'
+        image: process.env.PUBLIC_URL + "/images/jnews.png"
     },
     {
         filter: 'Other',
         title: 'House Price Prediction in Denpasar, Bali, Indonesia',
         description: 'What I do in this project is to analyze features that affect house prices and then make a regression model using Multi Layer Perceptron.',
-        image: './portfolio/images/dts-harga-rumah.png'
+        image: process.env.PUBLIC_URL + "/images/dts-harga-rumah.png"
     },
     // {
     //     filter: 'Other',
