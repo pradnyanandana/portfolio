@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* #about {
+    height: calc(500vh - 25rem - 360px) !important;
+} */
+
+#about .radius-for-skewed {
+    height: calc(100% - 5rem - 72px);
+}
+
+@media screen and (min-width: 1280px) {
+    #about .radius-for-skewed {
+        height: calc(100% - 5rem - 104px);
+    }
+}

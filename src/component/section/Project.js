@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from "react";
 import {CgArrowLongRight} from "react-icons/cg";
-import ProjectPopup from "./ProjectPopup";
+// import ProjectPopup from "./ProjectPopup";
 
 const ActiveClass =  'text-white bg-orange-500';
 
@@ -44,6 +44,18 @@ const ProjectList = [
         description: 'This project is a final project for Indonesia Android Kejar Intermediate. Movies are retrieved using IMDB API.',
         image: process.env.PUBLIC_URL + "/images/filmy.png"
     },
+    {
+        filter: 'Web',
+        title: 'Toga MBA Consulting',
+        description: '',
+        image: process.env.PUBLIC_URL + "/images/togamba.png"
+    },
+    {
+        filter: 'Web',
+        title: 'Megaya Store',
+        description: '',
+        image: process.env.PUBLIC_URL + "/images/megayastore.png"
+    },
 ]
 
 const Project = (props) => {
@@ -84,10 +96,10 @@ const Project = (props) => {
                     />
                 </div>
             </div>
-            <ProjectPopup
+            {/* <ProjectPopup
                 popupActive={popupActive}
                 setPopupActive={setPopupActive}
-            />
+            /> */}
         </section>
     )
 }
@@ -98,8 +110,8 @@ const List = ({active, setPopupActive}) => {
             {ProjectList.map((val, i) => (
                 (active === 'all' || val.filter.toLowerCase() === active) &&
                 <div key={`list-${i}`} className="w-full lg:w-1/3 px-3 mb-6 transition-all">
-                    <div className=" group rounded-3xl transition duration-500 wow animate__ animate__fadeInUp animated visible overflow-hidden">
-                        <div className={`relative h-96 ${Background[val.filter.toLowerCase()]}`}>
+                    <div className="group rounded-3xl transition duration-500 wow animate__ animate__fadeInUp animated visible overflow-hidden">
+                        <div className={`p-8 relative h-96 ${Background[val.filter.toLowerCase()]}`}>
                             <img className="h-full w-full object-scale-down" src={val.image} alt=""/>
                             <div className="transition-all duration-300 absolute rounded-3xl text-left p-8 m-8 w-[calc(100%-4rem)] left-0 -bottom-full bg-white opacity-0 group-hover:opacity-100 group-hover:bottom-0">
                                 <span className="inline-block text-xs mb-3 py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">{val.filter}</span>
