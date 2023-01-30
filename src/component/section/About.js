@@ -17,7 +17,7 @@ const About = (props) => {
                 <div className="container mx-auto px-2 md:px-4 h-full">
                     <div className="flex flex-col lg:flex-row -mx-4 h-full">
                         <div className="relative w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center overflow-hidden">
-                            <TechStack />
+                            {window.screen.width >= 1280 && <TechStack />}
                         </div>
                         <div className="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
                             <div className="w-full text-center lg:text-left">
