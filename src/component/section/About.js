@@ -8,28 +8,31 @@ const About = (props) => {
     gsap.registerPlugin(ScrollTrigger);
 
     const svgStyle = (svg) => {
-        svg.setAttribute("style", "width: 30px; height: auto; margin-right: 0.75rem");
+        svg.setAttribute("style", "width: 30px; height: auto;");
     };
 
-    const techs = ["python", "javascript", "php", "mysql", "postgresql", "laravel", "express", "django", "docker", "react", "wordpress"];
+    const techs = ["Python", "Javascript", "PHP", "MySQL", "PostgreSQL", "Laravel", "Express", "Django", "Docker", "React", "WordPress"];
 
     return (
         <section id="about" className="skewed-bottom-right h-screen">
             <div className="bg-indigo-50 pt-12 lg:pt-20 pb-20 radius-for-skewed">
                 <div className="container mx-auto px-2 md:px-4 h-full">
                     <div className="flex flex-col lg:flex-row -mx-4 h-full">
-                        <div className="relative w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center overflow-hidden">{window.screen.width >= 1280 && <TechStack techs={techs} />}</div>
+                        <div className="relative w-full lg:w-1/2 px-4 mb-0 flex items-center overflow-hidden">{window.screen.width >= 1280 && <TechStack techs={techs} />}</div>
                         <div className="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
                             <div className="w-full text-center lg:text-left">
                                 <div className="mx-auto mb-6 lg:mx-0">
                                     <span className="inline-block text-xs py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">About Me</span>
                                     <h2 className="mx-auto text-3xl xl:text-4xl my-4 font-bold font-rubik wow animate__ animate__fadeInUp animated animated visible">
-                                        <span>3+ Years Experiences in Software Development</span>
+                                        <span>
+                                            3+ Years Experiences <br />
+                                            in Software Development
+                                        </span>
                                     </h2>
                                     <p className="text-lg font-roboto wow animate__ animate__fadeInUp animated animated visible">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
                                 </div>
                                 <div className="mx-auto mb-6 lg:mx-0">
-                                    <div className="mt-3 flex flex-wrap items-center justify-center lg:hidden">
+                                    <div className="mt-3 flex flex-wrap items-center justify-center gap-3 lg:hidden">
                                         {techs.map((t) => (
                                             <ReactSVG key={t} src={process.env.PUBLIC_URL + "/images/icons/" + t + ".svg"} beforeInjection={svgStyle} />
                                         ))}
@@ -58,15 +61,19 @@ const About = (props) => {
 
 const TechStack = ({ techs }) => {
     const svgStyle = (svg) => {
-        svg.setAttribute("style", "width: 120px; height: auto; margin-right: 0.75rem");
+        svg.setAttribute("style", "width: 120px; height: auto;");
     };
 
     useEffect(() => {
-        const timeline = gsap.timeline();
+        const timelineLogo = gsap.timeline();
+        // const timelineText = gsap.timeline();
 
         techs.map((t) => {
-            timeline.fromTo("#about .logo-" + t, { xPercent: 100, yPercent: -50, opacity: 0, scale: 0.5 }, { xPercent: -50, yPercent: -50, opacity: 1, scale: 2, duration: 0.1 });
-            timeline.fromTo("#about .logo-" + t, { xPercent: -50, yPercent: -50, opacity: 1, scale: 2 }, { xPercent: -200, yPercent: -50, opacity: 0, scale: 0.5, delay: 0.2, duration: 0.1 });
+            timelineLogo.fromTo("#about .logo-" + t, { xPercent: 100, yPercent: -50, opacity: 0, scale: 0.5 }, { xPercent: -50, yPercent: -50, opacity: 1, scale: 2, duration: 0.1 });
+            timelineLogo.fromTo("#about .logo-" + t, { xPercent: -50, yPercent: -50, opacity: 1, scale: 2 }, { xPercent: -200, yPercent: -50, opacity: 0, scale: 0.5, delay: 0.2, duration: 0.1 });
+
+            // timelineText.fromTo("#about .text-" + t, { opacity: 0 }, { opacity: 1, duration: 0.1 });
+            // timelineText.fromTo("#about .text-" + t, { opacity: 1 }, { opacity: 0, delay: 0.2, duration: 0.1 });
         });
 
         ScrollTrigger.create({
@@ -75,16 +82,28 @@ const TechStack = ({ techs }) => {
             start: "-104px",
             end: "15000px",
             scrub: 2,
-            animation: timeline,
+            animation: timelineLogo,
         });
+
+        // ScrollTrigger.create({
+        //     trigger: "#about",
+        //     start: "-104px",
+        //     end: "15000px",
+        //     scrub: 2,
+        //     animation: timelineText,
+        // });
     }, []);
 
     return (
         <>
+            {/* <h3 className={`text-1xl xl:text-2xl font-bold font-rubik uppercase tracking-widest transform rotate-270`}>Tech Stacks</h3> */}
             {techs.map((t) => (
-                <div key={t} className={`logo-${t} absolute transform top-1/2 left-1/2 -translate-x-2/4 -translate-y-2/4`}>
-                    <ReactSVG src={process.env.PUBLIC_URL + "/images/icons/" + t + ".svg"} beforeInjection={svgStyle} />
-                </div>
+                <>
+                    <div className={`logo-${t} absolute transform top-1/2 left-1/2 -translate-x-2/4`}>
+                        <ReactSVG src={process.env.PUBLIC_URL + "/images/icons/" + t + ".svg"} beforeInjection={svgStyle} />
+                    </div>
+                    {/* <h4 className={`text-${t} absolute transform bottom-24 left-1/2 -translate-x-2/4 text-1xl xl:text-2xl font-bold font-rubik`}>{t}</h4> */}
+                </>
             ))}
         </>
     );

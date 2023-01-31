@@ -10,6 +10,9 @@ module.exports = {
             ...defaultTheme.screens,
         },
         extend: {
+            rotate: {
+                270: "270deg",
+            },
             colors: {
                 yellow: {
                     "100-transparent": "#FEEDCE20",

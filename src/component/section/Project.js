@@ -33,6 +33,30 @@ const ProjectList = [
         image: process.env.PUBLIC_URL + "/images/jnews.png"
     },
     {
+        filter: 'Web',
+        title: 'Toga MBA Consulting',
+        description: 'Website refreshment for Toga MBA Consulting. This website is built using WordPress and Gutenverse plugin.',
+        image: process.env.PUBLIC_URL + "/images/togamba.png"
+    },
+    {
+        filter: 'Web',
+        title: 'Megaya Store',
+        description: 'Create some features, such as social login, DHL shipping cost, pinterest pin image, color and size variation option.',
+        image: process.env.PUBLIC_URL + "/images/megayastore.png"
+    },
+    {
+        filter: 'Web',
+        title: 'Gradient Picker',
+        description: 'A tool to generate gradient CSS code. It has some color pickers to add colors to the gradient.',
+        image: process.env.PUBLIC_URL + "/images/gradient-picker.png"
+    },
+    {
+        filter: 'Backend',
+        title: 'Jegauto Telegram BOT',
+        description: 'A Telegram BOT that send notification about car prices and some other details.',
+        image: process.env.PUBLIC_URL + "/images/jegauto.jpg"
+    },
+    {
         filter: 'Other',
         title: 'House Price Prediction in Denpasar, Bali, Indonesia',
         description: 'What I do in this project is to analyze features that affect house prices and then make a regression model using Multi Layer Perceptron.',
@@ -43,18 +67,6 @@ const ProjectList = [
         title: 'Filmy',
         description: 'This project is a final project for Indonesia Android Kejar Intermediate. Movies are retrieved using IMDB API.',
         image: process.env.PUBLIC_URL + "/images/filmy.png"
-    },
-    {
-        filter: 'Web',
-        title: 'Toga MBA Consulting',
-        description: '',
-        image: process.env.PUBLIC_URL + "/images/togamba.png"
-    },
-    {
-        filter: 'Web',
-        title: 'Megaya Store',
-        description: '',
-        image: process.env.PUBLIC_URL + "/images/megayastore.png"
     },
 ]
 
