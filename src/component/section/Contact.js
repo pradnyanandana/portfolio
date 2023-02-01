@@ -1,5 +1,5 @@
 import React from "react";
-import {RiWhatsappFill} from "react-icons/ri";
+// import {RiWhatsappFill} from "react-icons/ri";
 import {MdEmail, MdLocationPin} from "react-icons/md";
 
 const Contact = (props) => {

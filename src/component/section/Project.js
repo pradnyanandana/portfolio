@@ -1,6 +1,8 @@
-import React, {Fragment, useState} from "react";
+import React, {Fragment, useEffect, useState} from "react";
 import {CgArrowLongRight} from "react-icons/cg";
 // import ProjectPopup from "./ProjectPopup";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import gsap from "gsap";
 
 const ActiveClass =  'text-white bg-orange-500';
 
@@ -71,12 +73,31 @@ const ProjectList = [
 ]
 
 const Project = (props) => {
+    gsap.registerPlugin(ScrollTrigger);
+
     const [active, setActive] = useState('all');
     const [popupActive, setPopupActive] = useState(false);
 
     const ChangeFilter = (key) => {
         setActive(key);
     }
+
+    useEffect(() => {
+        ScrollTrigger.create({
+            trigger: "#project",
+            start: "-104px",
+            scrub: 2,
+            onUpdate: () => {
+                document.querySelector("#project .text-heading").classList.add("text-transparent", "bg-clip-text", "bg-gradient-to-r", "from-gray-700", "via-orange-500", "to-black");
+            },
+            onLeave: () => {
+                document.querySelector("#project .text-heading").classList.remove("text-transparent", "bg-clip-text", "bg-gradient-to-r", "from-gray-700", "via-orange-500", "to-black");
+            },
+            onLeaveBack: () => {
+                document.querySelector("#project .text-heading").classList.remove("text-transparent", "bg-clip-text", "bg-gradient-to-r", "from-gray-700", "via-orange-500", "to-black");
+            }
+        });
+    }, []);
 
     return (
         <section id="project" className="pt-16 pb-20">
@@ -85,11 +106,12 @@ const Project = (props) => {
                     <div className="w-full w-4/12">
                         <span className="inline-block text-xs py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">Portfolio</span>
                         <h2 className="mx-auto text-3xl xl:text-4xl font-rubik my-4 font-bold font-heading wow animate__ animate__fadeInUp animated animated visible">
-                            <span>Some of <br/>My Latest Projects</span>
+                            <span>Some of <br/></span>
+                            <span className="text-heading">My Latest Projects</span>
                         </h2>
                     </div>
                     <div className="w-full w-8/12 sm:ml-12">
-                        <p className="mx-auto text-lg text-blueGray-400 font-roboto wow animate__ animate__fadeInUp animated animated visible">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
+                        <p className="mx-auto text-lg text-blueGray-400 font-roboto wow animate__ animate__fadeInUp animated animated visible text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
                     </div>
                 </div>
                 <div className="project-filters text-center mb-12 rounded-full md:p-3 md:bg-blue-300-transparent">
@@ -128,7 +150,7 @@ const List = ({active, setPopupActive}) => {
                             <div className="transition-all duration-300 absolute rounded-3xl text-left p-8 m-8 w-[calc(100%-4rem)] left-0 -bottom-full bg-white opacity-0 group-hover:opacity-100 group-hover:bottom-0">
                                 <span className="inline-block text-xs mb-3 py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">{val.filter}</span>
                                 <h3 className="mb-3 font-bold font-heading text-2xl font-rubik">{val.title}</h3>
-                                <p className="text-sm text-blueGray-400 font-roboto mb-5">{val.description}</p>
+                                <p className="text-sm text-blueGray-400 font-roboto mb-5 text-gray-500">{val.description}</p>
                                 <a className="text-sm text-blueGray-400 font-roboto flex items-center text-yellow-500 cursor-pointer" onClick={e => setPopupActive(true)}>
                                     Detail <CgArrowLongRight className="ml-2"></CgArrowLongRight>
                                 </a>
