@@ -1,6 +1,6 @@
 import React, {Fragment, useEffect, useState} from "react";
 import {CgArrowLongRight} from "react-icons/cg";
-// import ProjectPopup from "./ProjectPopup";
+import ProjectPopup from "./ProjectPopup";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
 
@@ -26,49 +26,64 @@ const ProjectList = [
         filter: 'WordPress',
         title: 'Gutenverse',
         description: 'Gutenverse is a WordPress plugin to extend the functionalities of Full Site Editor. It has a lot of blocks that can be used in building content. Also, it has a form management system included in plugin features.',
-        image: process.env.PUBLIC_URL + "/images/gutenverse.png"
+        image: process.env.PUBLIC_URL + "/images/gutenverse.png",
+        techStacks: "WordPress, PHP, Javascript, React, MySQL",
+        url: "https://wordpress.org/plugins/gutenverse/"
     },
     {
         filter: 'WordPress',
         title: 'JNews',
         description: 'JNews is a premium news and magazine theme for WordPress. In this project, I am tasked to develop various features.',
-        image: process.env.PUBLIC_URL + "/images/jnews.png"
+        image: process.env.PUBLIC_URL + "/images/jnews.png",
+        techStacks: "WordPress, PHP, Javascript, MySQL",
+        url: "https://jnews.io/"
     },
     {
         filter: 'Web',
         title: 'Toga MBA Consulting',
         description: 'Website refreshment for Toga MBA Consulting. This website is built using WordPress and Gutenverse plugin.',
-        image: process.env.PUBLIC_URL + "/images/togamba.png"
+        image: process.env.PUBLIC_URL + "/images/togamba.png",
+        techStacks: "WordPress, PHP, Javascript, MySQL",
+        url: "https://togambaconsulting.com/"
     },
     {
         filter: 'Web',
         title: 'Megaya Store',
         description: 'Create some features, such as social login, DHL shipping cost, pinterest pin image, color and size variation option.',
-        image: process.env.PUBLIC_URL + "/images/megayastore.png"
+        image: process.env.PUBLIC_URL + "/images/megayastore.png",
+        techStacks: "WordPress, PHP, Javascript, MySQL",
+        url: "https://megayastore.com/"
     },
     {
         filter: 'Web',
         title: 'Gradient Picker',
         description: 'A tool to generate gradient CSS code. It has some color pickers to add colors to the gradient.',
-        image: process.env.PUBLIC_URL + "/images/gradient-picker.png"
+        image: process.env.PUBLIC_URL + "/images/gradient-picker.png",
+        techStacks: "Javascript, Vue",
+        url: "https://pradnyanandana.github.io/gradient-picker/"
     },
     {
         filter: 'Backend',
         title: 'Jegauto Telegram BOT',
         description: 'A Telegram BOT that send notification about car prices and some other details.',
-        image: process.env.PUBLIC_URL + "/images/jegauto.jpg"
+        image: process.env.PUBLIC_URL + "/images/jegauto.jpg",
+        techStacks: "Javascript, NodeJS, Express"
     },
     {
         filter: 'Other',
         title: 'House Price Prediction in Denpasar, Bali, Indonesia',
         description: 'What I do in this project is to analyze features that affect house prices and then make a regression model using Multi Layer Perceptron.',
-        image: process.env.PUBLIC_URL + "/images/dts-harga-rumah.png"
+        image: process.env.PUBLIC_URL + "/images/dts-harga-rumah.png",
+        techStacks: "Python",
+        url: "https://github.com/pradnyanandana/dtshargarumah/"
     },
     {
         filter: 'Other',
         title: 'Filmy',
         description: 'This project is a final project for Indonesia Android Kejar Intermediate. Movies are retrieved using IMDB API.',
-        image: process.env.PUBLIC_URL + "/images/filmy.png"
+        image: process.env.PUBLIC_URL + "/images/filmy.png",
+        techStacks: "Java, Android",
+        url: "https://github.com/pradnyanandana/PopularMoviesIAK",
     },
 ]
 
@@ -111,7 +126,7 @@ const Project = (props) => {
                         </h2>
                     </div>
                     <div className="w-full w-8/12 sm:ml-12">
-                        <p className="mx-auto text-lg text-blueGray-400 font-roboto wow animate__ animate__fadeInUp animated animated visible text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
+                        <p className="mx-auto text-lg text-blueGray-400 font-roboto wow animate__ animate__fadeInUp animated animated visible text-gray-500">During my time as a software developer, I have successfully done several projects. Here are some of them.</p>
                     </div>
                 </div>
                 <div className="project-filters text-center mb-12 rounded-full md:p-3 md:bg-blue-300-transparent">
@@ -130,10 +145,10 @@ const Project = (props) => {
                     />
                 </div>
             </div>
-            {/* <ProjectPopup
+            <ProjectPopup
                 popupActive={popupActive}
                 setPopupActive={setPopupActive}
-            /> */}
+            />
         </section>
     )
 }
@@ -151,7 +166,7 @@ const List = ({active, setPopupActive}) => {
                                 <span className="inline-block text-xs mb-3 py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">{val.filter}</span>
                                 <h3 className="mb-3 font-bold font-heading text-2xl font-rubik">{val.title}</h3>
                                 <p className="text-sm text-blueGray-400 font-roboto mb-5 text-gray-500">{val.description}</p>
-                                <a className="text-sm text-blueGray-400 font-roboto flex items-center text-yellow-500 cursor-pointer" onClick={e => setPopupActive(true)}>
+                                <a className="text-sm text-blueGray-400 font-roboto flex items-center text-yellow-500 cursor-pointer" onClick={e => setPopupActive(val)}>
                                     Detail <CgArrowLongRight className="ml-2"></CgArrowLongRight>
                                 </a>
                             </div>

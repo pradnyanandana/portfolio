@@ -4,8 +4,8 @@ import { Link } from "react-scroll";
 import { Spin as Hamburger } from "hamburger-react";
 
 const SocialShare = [
-    { Social: <FaLinkedinIn size={20} />, link: "https://www.linkedin.com/" },
-    { Social: <FaGithub size={20} />, link: "https://www.github.com/" },
+    { Social: <FaLinkedinIn size={20} />, link: "https://www.linkedin.com/in/pradnyanandana/" },
+    { Social: <FaGithub size={20} />, link: "https://github.com/pradnyanandana" },
 ];
 
 const Menu = [
@@ -37,7 +37,7 @@ const Header = (props) => {
     }, []);
 
     return (
-        <header className={`header-area fixed z-50 top-0 bloc w-full transition-all bg-white`} style={{ "--tw-bg-opacity": headerBgOpacity, maxWidth: "100vw" }}>
+        <header id="header" className={`header-area fixed z-50 top-0 bloc w-full transition-all bg-white`} style={{ "--tw-bg-opacity": headerBgOpacity, maxWidth: "100vw" }}>
             <div className="header-wrapper container mx-auto px-2 md:px-4 py-3 xl:py-5 flex justify-between items-center flex-wrap">
                 <div className="header-left flex items-center">
                     <div className="header-logo block">
@@ -60,14 +60,16 @@ const Header = (props) => {
                         <ul className="social-share flex justify-start p-0 -m-3">
                             {SocialShare.map((val, i) => (
                                 <li key={i} className="m-2 text-xl text-gray-700 hover:text-gray-900 xl:m-3">
-                                    <a href={`${val.link}`}>{val.Social}</a>
+                                    <a href={`${val.link}`} target="_blank">{val.Social}</a>
                                 </li>
                             ))}
                         </ul>
                     </div>
                     <div className="header-button ml-0 xl:ml-10">
-                        <a className="rn-button hidden xl:block px-5 h-10 bg-gray-900 inline-block leading-10 rounded-xl relative text-base text-white font-normal uppercase font-roboto" href="#">
-                            <span>Hire Me</span>
+                        <a className="rn-button hidden xl:block px-5 h-10 bg-gray-900 inline-block leading-10 rounded-xl relative text-base text-white font-normal uppercase font-roboto cursor-pointer">
+                            <Link to={"footer"} spy={true} smooth={true}>
+                                <span>Contact Me</span>
+                            </Link>
                         </a>
                     </div>
                     <div className="hamburger-menu block xl:hidden bg-gray-900 rounded-xl ml-3 xs:ml-5" onClick={ToggleMenu}>

@@ -33,7 +33,7 @@ const Service = (props) => {
                     <h2 className="max-w-lg mx-auto my-4 text-3xl xl:text-4xl font-rubik font-bold font-heading wow animate__ animate__fadeInUp animated animated visible">
                         <span className="text-heading">App Solutions</span>
                     </h2>
-                    <p className="max-w-xl mx-auto text-lg text-blueGray-400 font-roboto wow animate__ animate__fadeInUp animated animated visible text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
+                    <p className="max-w-xl mx-auto text-lg text-blueGray-400 font-roboto wow animate__ animate__fadeInUp animated animated visible text-gray-500">Besides working for a company, I also offer some services to build or custom application. Here are some of the services which I offer</p>
                 </div>
                 <div className="flex flex-wrap -mx-3 -mb-6">
                     <div className="w-full lg:w-1/3 px-3 mb-6">
@@ -42,7 +42,7 @@ const Service = (props) => {
                                 <MdComputer className="w-14 h-14 mx-auto p-3" size={32} />
                             </div>
                             <h3 className="mb-2 font-bold font-heading text-2xl font-rubik">Web Development</h3>
-                            <p className="text-sm text-blueGray-400 font-roboto text-gray-500">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p className="text-sm text-blueGray-400 font-roboto text-gray-500">Provide web development services to create blogs, company profiles, landing pages, etc. Put your business online by using web apps.</p>
                         </div>
                     </div>
                     <div className="w-full lg:w-1/3 px-3 mb-6">
@@ -51,7 +51,7 @@ const Service = (props) => {
                                 <CgDatabase className="w-14 h-14 mx-auto p-3" size={32} />
                             </div>
                             <h3 className="mb-2 font-bold font-heading text-2xl font-rubik">Backend Development</h3>
-                            <p className="text-sm text-blueGray-400 font-roboto text-gray-500">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p className="text-sm text-blueGray-400 font-roboto text-gray-500">Build a service to collect, maintain, and serve the data. Some service for example: scrapping data and API integration.</p>
                         </div>
                     </div>
                     <div className="w-full lg:w-1/3 px-3 mb-6">
@@ -60,7 +60,7 @@ const Service = (props) => {
                                 <FaWordpressSimple className="w-14 h-14 mx-auto p-3" size={32} />
                             </div>
                             <h3 className="mb-2 font-bold font-heading text-2xl font-rubik">WordPress Development</h3>
-                            <p className="text-sm text-blueGray-400 font-roboto text-gray-500">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p className="text-sm text-blueGray-400 font-roboto text-gray-500">Help you to create or maintain WordPress web, such as blogs, landing pages, and e-commerce. Also do some customization to themes and plugins.</p>
                         </div>
                     </div>
                 </div>

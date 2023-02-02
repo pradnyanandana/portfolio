@@ -12,13 +12,13 @@ const Contact = (props) => {
                             <h2 className="mb-4 text-3xl xl:text-4xl font-rubik my-3 font-bold font-heading wow animate__ animate__fadeInUp animated animated visible">
                                 <span>Get In Touch</span>
                             </h2>
-                            <p className="text-lg text-blueGray-400 mb-4 font-roboto wow animate__ animate__fadeInUp animated animated visible">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque efficitur nisl sodales egestas lobortis.</p>
+                            <p className="text-lg text-blueGray-400 mb-4 font-roboto wow animate__ animate__fadeInUp animated animated visible text-gray-500">My inbox are always open for questions, collaborations, or just say hi. Don't hesitate to use the form. I'll try to get back to you.</p>
                             <div className="contact-information">
-                                <span className="flex items-center text-lg mb-2">
+                                <span className="flex items-center text-lg mb-2 text-gray-500">
                                     <MdEmail className="mr-2 text-orange-500 text-xl"/>
                                     pradnyanandana@gmail.com
                                 </span>
-                                <span className="flex items-center text-lg">
+                                <span className="flex items-center text-lg text-gray-500">
                                     <MdLocationPin className="mr-2 text-orange-500 text-xl"/>
                                     I live in Bali, Indonesia
                                 </span>

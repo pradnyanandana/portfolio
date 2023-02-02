@@ -3,7 +3,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
     purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
-    darkMode: false, // or 'media' or 'class'
+    darkMode: false, // or 'media' or 'class',
     theme: {
         screens: {
             xs: "350px",
@@ -12,6 +12,10 @@ module.exports = {
         extend: {
             rotate: {
                 270: "270deg",
+            },
+            maxHeight: {
+                "80%": "90%",
+                "90%": "90%",
             },
             colors: {
                 yellow: {
