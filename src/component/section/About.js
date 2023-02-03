@@ -14,12 +14,12 @@ const About = (props) => {
     const techs = ["Python", "Javascript", "PHP", "MySQL", "PostgreSQL", "Laravel", "Express", "Django", "Docker", "React", "WordPress"];
 
     return (
-        <section id="about" className="skewed-bottom-right h-screen">
+        <section id="about" className="skewed-bottom-right lg:h-screen">
             <div className="bg-indigo-50 pt-12 lg:pt-20 pb-20 radius-for-skewed">
-                <div className="container mx-auto px-2 md:px-4 h-full">
-                    <div className="flex flex-col lg:flex-row -mx-4 h-full">
-                        <div className="relative w-full lg:w-1/2 px-4 mb-0 flex items-center overflow-hidden">{window.screen.width >= 1280 && <TechStack techs={techs} />}</div>
-                        <div className="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0 flex items-center">
+                <div className="container mx-auto px-2 md:px-4 lg:h-full">
+                    <div className="flex flex-col lg:flex-row -mx-4 lg:h-full">
+                        <div className="relative w-full lg:w-1/2 px-4 mb-0 flex items-center overflow-hidden">{window.screen.width >= 1024 && <TechStack techs={techs} />}</div>
+                        <div className="w-full lg:w-1/2 px-4 mb-0 flex items-center">
                             <div className="w-full text-center lg:text-left">
                                 <div className="mx-auto mb-6 lg:mx-0">
                                     <span className="inline-block text-xs py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">About Me</span>
@@ -29,7 +29,7 @@ const About = (props) => {
                                         </span>
                                         <span>in Software Development</span>
                                     </h2>
-                                    <p className="text-lg font-roboto wow animate__ animate__fadeInUp animated animated visible text-gray-500">I'm a software developer who has built many web application. Currently, I work as web developer who responsible to create and maintain WordPress themes and plugins. Has succeeded to develop plugin that has received many positive reviews on WordPress directory.</p>
+                                    <p className="text-base lg:text-lg font-roboto wow animate__ animate__fadeInUp animated animated visible text-gray-500">As a software developer with focus on PHP, JavaScript, and Python currently. I've been able to built many apps, especially web apps. However, I also have a strong desire to learn, and I am able to quickly pick up new programming languages and tools.</p>
                                 </div>
                                 <div className="mx-auto mb-6 lg:mx-0">
                                     <div className="mt-3 flex flex-wrap items-center justify-center gap-3 lg:hidden">

@@ -66,7 +66,7 @@ const ProjectList = [
         filter: 'Backend',
         title: 'Jegauto Telegram BOT',
         description: 'A Telegram BOT that send notification about car prices and some other details.',
-        image: process.env.PUBLIC_URL + "/images/jegauto.jpg",
+        image: process.env.PUBLIC_URL + "/images/jegauto.png",
         techStacks: "Javascript, NodeJS, Express"
     },
     {
@@ -126,7 +126,7 @@ const Project = (props) => {
                         </h2>
                     </div>
                     <div className="w-full w-8/12 sm:ml-12">
-                        <p className="mx-auto text-lg text-blueGray-400 font-roboto wow animate__ animate__fadeInUp animated animated visible text-gray-500">During my time as a software developer, I have successfully done several projects. Here are some of them.</p>
+                        <p className="mx-auto text-base lg:text-lg text-blueGray-400 font-roboto wow animate__ animate__fadeInUp animated animated visible text-gray-500">These projects below are some sample projects that I have successfully developed. Made with different languages and different types of applications.</p>
                     </div>
                 </div>
                 <div className="project-filters text-center mb-12 rounded-full md:p-3 md:bg-blue-300-transparent">
@@ -160,8 +160,8 @@ const List = ({active, setPopupActive}) => {
                 (active === 'all' || val.filter.toLowerCase() === active) &&
                 <div key={`list-${i}`} className="w-full lg:w-1/3 px-3 mb-6 transition-all">
                     <div className="group rounded-3xl transition duration-500 wow animate__ animate__fadeInUp animated visible overflow-hidden">
-                        <div className={`p-8 relative h-96 ${Background[val.filter.toLowerCase()]}`}>
-                            <img className="h-full w-full object-scale-down" src={val.image} alt=""/>
+                        <div className={`relative h-96 ${Background[val.filter.toLowerCase()]}`}>
+                            <img className="h-full w-full object-cover" src={val.image} alt=""/>
                             <div className="transition-all duration-300 absolute rounded-3xl text-left p-8 m-8 w-[calc(100%-4rem)] left-0 -bottom-full bg-white opacity-0 group-hover:opacity-100 group-hover:bottom-0">
                                 <span className="inline-block text-xs mb-3 py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">{val.filter}</span>
                                 <h3 className="mb-3 font-bold font-heading text-2xl font-rubik">{val.title}</h3>
