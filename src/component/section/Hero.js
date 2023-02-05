@@ -28,7 +28,7 @@ const Hero = (props) => {
                             </h2>
                         </div>
                     </div>
-                    <div className="w-full sm:w-3/5 px-3 mb-12 sm:mb-0">
+                    <div className="relative group w-full sm:w-3/5 px-3 mb-12 sm:mb-0">
                         <div className="flex items-center justify-end">
                             <Lottie 
                                 options={defaultOptions}
@@ -37,6 +37,7 @@ const Hero = (props) => {
                                 style={{marginLeft: "auto", marginRight: 0}}
                             />
                         </div>
+                        <p className="absolute transform bottom-0 left-1/2 -translate-x-2/4 hidden group-hover:block text-center">Animation by <a className="text-orange-500 hover:text-gray-500 cursor-pointer" href="https://lottiefiles.com/75296-developer-01-whoooa" target="_blank">Greg Dlubacz</a></p>
                     </div>
                 </div>
             </div>

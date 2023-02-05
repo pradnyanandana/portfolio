@@ -33,7 +33,7 @@ const ProjectList = [
     {
         filter: 'WordPress',
         title: 'JNews',
-        description: 'JNews is a premium news and magazine theme for WordPress. In this project, I am tasked to develop various features.',
+        description: 'JNews is a premium news and magazine theme for WordPress. In this project, my task is developing various features.',
         image: process.env.PUBLIC_URL + "/images/jnews.png",
         techStacks: "WordPress, PHP, Javascript, MySQL",
         url: "https://jnews.io/"
@@ -41,7 +41,7 @@ const ProjectList = [
     {
         filter: 'Web',
         title: 'Toga MBA Consulting',
-        description: 'Website refreshment for Toga MBA Consulting. This website is built using WordPress and Gutenverse plugin.',
+        description: 'A refreshment website for Toga MBA Consulting. This website is built using WordPress and Gutenverse plugin.',
         image: process.env.PUBLIC_URL + "/images/togamba.png",
         techStacks: "WordPress, PHP, Javascript, MySQL",
         url: "https://togambaconsulting.com/"
@@ -57,7 +57,7 @@ const ProjectList = [
     {
         filter: 'Web',
         title: 'Gradient Picker',
-        description: 'A tool to generate gradient CSS code. It has some color pickers to add colors to the gradient.',
+        description: 'A tool to generate gradient CSS code. It has some color pickers to add new colors to the gradient.',
         image: process.env.PUBLIC_URL + "/images/gradient-picker.png",
         techStacks: "Javascript, Vue",
         url: "https://pradnyanandana.github.io/gradient-picker/"
@@ -65,14 +65,14 @@ const ProjectList = [
     {
         filter: 'Backend',
         title: 'Jegauto Telegram BOT',
-        description: 'A Telegram BOT that send notification about car prices and some other details.',
+        description: 'A Telegram BOT that sends notification about car prices and some other details.',
         image: process.env.PUBLIC_URL + "/images/jegauto.png",
         techStacks: "Javascript, NodeJS, Express"
     },
     {
         filter: 'Other',
         title: 'House Price Prediction in Denpasar, Bali, Indonesia',
-        description: 'What I do in this project is to analyze features that affect house prices and then make a regression model using Multi Layer Perceptron.',
+        description: 'Analyze features that affect house prices and make a regression model using the Multi Layer Perceptron.',
         image: process.env.PUBLIC_URL + "/images/dts-harga-rumah.png",
         techStacks: "Python",
         url: "https://github.com/pradnyanandana/dtshargarumah/"
@@ -80,7 +80,7 @@ const ProjectList = [
     {
         filter: 'Other',
         title: 'Filmy',
-        description: 'This project is a final project for Indonesia Android Kejar Intermediate. Movies are retrieved using IMDB API.',
+        description: 'This is the final project for Indonesia Android Kejar Intermediate. Movies are retrieved using IMDB API.',
         image: process.env.PUBLIC_URL + "/images/filmy.png",
         techStacks: "Java, Android",
         url: "https://github.com/pradnyanandana/PopularMoviesIAK",
@@ -126,7 +126,7 @@ const Project = (props) => {
                         </h2>
                     </div>
                     <div className="w-full w-8/12 sm:ml-12">
-                        <p className="mx-auto text-base lg:text-lg text-blueGray-400 font-roboto wow animate__ animate__fadeInUp animated animated visible text-gray-500">These projects below are some sample projects that I have successfully developed. Made with different languages and different types of applications.</p>
+                        <p className="mx-auto text-base lg:text-lg text-blueGray-400 font-roboto wow animate__ animate__fadeInUp animated animated visible text-gray-500">These are some sample projects that I have successfully developed; made with various languages and types of applications.</p>
                     </div>
                 </div>
                 <div className="project-filters text-center mb-12 rounded-full md:p-3 md:bg-blue-300-transparent">

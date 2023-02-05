@@ -12,7 +12,7 @@
 
 #project-popup > div::-webkit-scrollbar {
     width: 1em;
-  }
+}
 
 @media screen and (min-width: 1024px) {
     #about .radius-for-skewed {

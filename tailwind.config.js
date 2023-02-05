@@ -87,7 +87,7 @@ module.exports = {
         container: ["before", "after", "responsive"],
         contrast: ["before", "after", "responsive"],
         cursor: ["before", "after", "responsive"],
-        display: ["before", "after", "responsive"],
+        display: ["before", "after", "responsive", "group-hover"],
         divideColor: ["before", "after", "responsive", "dark"],
         divideOpacity: ["before", "after", "responsive", "dark"],
         divideStyle: ["before", "after", "responsive"],

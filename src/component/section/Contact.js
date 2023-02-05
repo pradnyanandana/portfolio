@@ -16,16 +16,16 @@ const Contact = (props) => {
                     <div className="flex flex-col lg:flex-row -mx-4">
                         <div className="w-full lg:w-1/2 px-4 mb-12 md:mb-20 lg:mb-0">
                             <h2 className="mb-4 text-3xl xl:text-4xl font-rubik my-3 font-bold font-heading wow animate__ animate__fadeInUp animated animated visible">
-                                <span>Get In Touch</span>
+                                <span>Let's Get In Touch!</span>
                             </h2>
-                            <p className="text-base lg:text-lg text-blueGray-400 mb-4 font-roboto wow animate__ animate__fadeInUp animated animated visible text-gray-500">My inbox are always open for questions, collaborations, or just say hi. Don't hesitate to use the form. I'll try to get back to you.</p>
+                            <p className="text-base lg:text-lg text-blueGray-400 mb-4 font-roboto wow animate__ animate__fadeInUp animated animated visible text-gray-500">My inbox is always open for questions, collaborations, or just say hi. Feel free to use the provided form, I'll try to get back to you soon!</p>
                             <div className="contact-information">
                                 <span className="flex items-center text-base lg:text-lg mb-2 text-gray-500">
                                     <MdEmail className="mr-2 text-orange-500 text-xl" />
                                     pradnyanandana@gmail.com
                                 </span>
                                 <span className="flex items-center text-base lg:text-lg text-gray-500">
-                                    <MdLocationPin className="mr-2 text-orange-500 text-xl" />I live in Bali, Indonesia
+                                    <MdLocationPin className="mr-2 text-orange-500 text-xl" />Bali, Indonesia
                                 </span>
                             </div>
                         </div>
@@ -38,7 +38,7 @@ const Contact = (props) => {
                             </div>
                             <div className="text-center lg:text-left">
                                 <a className="tracking-wide hover-up-2 block sm:inline-block py-4 px-8 sm:mb-0 sm:mr-3 text-base text-white text-center font-semibold font-roboto leading-none bg-orange-500 hover:bg-yellow-600 uppercase rounded-xl wow animate__ animate__fadeInUp animated visible" href="#key-features" onClick={sendEmail}>
-                                    Send Request
+                                    Send Message
                                 </a>
                             </div>
                         </div>
