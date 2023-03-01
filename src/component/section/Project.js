@@ -162,7 +162,7 @@ const List = ({active, setPopupActive}) => {
                     <div className="group rounded-3xl transition duration-500 wow animate__ animate__fadeInUp animated visible overflow-hidden">
                         <div className={`relative h-96 ${Background[val.filter.toLowerCase()]}`}>
                             <img className="h-full w-full object-cover" src={val.image} alt=""/>
-                            <div className="transition-all duration-300 absolute rounded-3xl text-left p-8 m-8 w-[calc(100%-4rem)] left-0 -bottom-full bg-white opacity-0 group-hover:opacity-100 group-hover:bottom-0">
+                            <div className="transition-all duration-300 absolute rounded-3xl text-left p-8 m-8 w-[calc(100%-4rem)] left-0 -bottom-full bg-white opacity-0 group-hover:opacity-100 group-hover:bottom-0 overflow-y-auto" style={{maxHeight: "calc(100% - 64px)"}}>
                                 <span className="inline-block text-xs mb-3 py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">{val.filter}</span>
                                 <h3 className="mb-3 font-bold font-heading text-2xl font-rubik">{val.title}</h3>
                                 <p className="text-sm text-blueGray-400 font-roboto mb-5 text-gray-500">{val.description}</p>
