@@ -2,7 +2,6 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://pradnyanandana.github.io/portfolio",
   "dependencies": {
     "@craco/craco": "^6.3.0",
     "@shimyshack/tailwindcss-pseudo-element-plugin": "^1.0.4",

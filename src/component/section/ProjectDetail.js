@@ -35,7 +35,7 @@ const ProjectDetail = (props) => {
             </section>
             <section id="project-detail-body" className="md:py-36 py-16">
                 <div className="container mx-auto md:px-4 text-left text-gray-900">
-                    <div className="flex flex-wrap items-start xl:gap-x-24 gap-x-16 gap-y-8 mb-16">
+                    <div className="flex flex-wrap items-start xl:gap-x-24 gap-x-16 gap-y-8 mb-16 overflow-hidden">
                         <div className="timeline">
                             <h4 className="font-bold text-base font-inter text-gray-900">Timeline</h4>
                             <p className="text-base font-inter text-gray-900">{project.timeline}</p>

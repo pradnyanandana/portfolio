@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect, useState } from "react";
-// import ProjectPopup from "./ProjectPopup";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { CgArrowLongRight } from "react-icons/cg";
+import { Link } from "react-router-dom";
 import { projects } from "../data/project";
 import gsap from "gsap";
 
@@ -26,7 +25,6 @@ const Project = (props) => {
     gsap.registerPlugin(ScrollTrigger);
 
     const [active, setActive] = useState("all");
-    // const [popupActive, setPopupActive] = useState(false);
 
     const ChangeFilter = (key) => {
         setActive(key);
@@ -78,16 +76,9 @@ const Project = (props) => {
                     </ul>
                 </div>
                 <div className="flex flex-wrap -mx-6 -mb-12">
-                    <List
-                        active={active}
-                        // setPopupActive={setPopupActive}
-                    />
+                    <List active={active} />
                 </div>
             </div>
-            {/* <ProjectPopup
-                popupActive={popupActive}
-                setPopupActive={setPopupActive}
-            /> */}
         </section>
     );
 };
@@ -99,15 +90,17 @@ const List = ({ active }) => {
                 (val, i) =>
                     (active === "all" || val.filter.toLowerCase() === active) && (
                         <div key={`list-${i}`} className="relative w-full lg:w-1/3 px-6 mb-12 transition-all">
-                            <div className="relative group border border-gray-300 transition duration-500 wow animate__ animate__fadeInUp animated visible overflow-hidden cursor-pointer" onClick={() => (window.location.href = `${process.env.PUBLIC_URL}/project/${val.id}`)}>
-                                <span className="absolute z-10 top-6 left-6 inline-block opacity-0 group-hover:opacity-100 text-xs mb-3 py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">{val.filter}</span>
-                                <div className={`relative h-96 ${Background[val.filter.toLowerCase()]}`}>
-                                    <img className="h-full w-full object-cover" src={`${process.env.PUBLIC_URL}/images/project/${val.id}/thumbnail.png`} alt="" />
+                            <Link to={`/project/${val.id}`}>
+                                <div className="relative group border border-gray-300 transition duration-500 wow animate__ animate__fadeInUp animated visible overflow-hidden cursor-pointer" onClick={() => (window.location.href = `${process.env.PUBLIC_URL}/project/${val.id}`)}>
+                                    <span className="absolute z-10 top-6 left-6 inline-block opacity-0 group-hover:opacity-100 text-xs mb-3 py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">{val.filter}</span>
+                                    <div className={`relative h-96 ${Background[val.filter.toLowerCase()]}`}>
+                                        <img className="h-full w-full object-cover" src={`${process.env.PUBLIC_URL}/images/project/${val.id}/thumbnail.png`} alt="" />
+                                    </div>
                                 </div>
-                            </div>
-                            <h3 className="mt-3 font-bold font-heading text-base text-center font-inter cursor-pointer hover:text-orange-500" onClick={() => (window.location.href = `${process.env.PUBLIC_URL}/project/${val.id}`)}>
-                                {val.title}
-                            </h3>
+                                <h3 className="mt-3 font-bold font-heading text-base text-center font-inter cursor-pointer hover:text-orange-500" onClick={() => (window.location.href = `${process.env.PUBLIC_URL}/project/${val.id}`)}>
+                                    {val.title}
+                                </h3>
+                            </Link>
                         </div>
                     )
             )}

@@ -7,7 +7,7 @@ import Service from "./component/section/Service";
 import Footer from "./component/footer/Footer";
 import Project from "./component/section/Project";
 import Contact from "./component/section/Contact";
-import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import { Fragment } from "react/cjs/react.production.min";
 import ProjectDetail from "./component/section/ProjectDetail";
@@ -19,14 +19,13 @@ const App = (props) => {
             <Router>
                 <Header />
                 <Switch>
-                    <Route exact path="/portfolio" component={() => <Redirect to="/portfolio/home" />} />
-                    <Route exact path="/portfolio/home">
+                    <Route exact path="/">
                         <Hero />
                         <About />
                         <Service />
                         <Project />
                     </Route>
-                    <Route path="/portfolio/project/:projectId">
+                    <Route path="/project/:projectId">
                         <ProjectDetail />
                     </Route>
                 </Switch>

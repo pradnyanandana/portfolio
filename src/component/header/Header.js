@@ -51,7 +51,7 @@ const Header = (props) => {
                             {pathname === "/portfolio/home" &&
                                 Menu.map((e) => (
                                     <li key={e.link} className="py-2 table xl:block xl:py-0 xl:mx-3 relative cursor-pointer">
-                                        <Link to={e.link} spy={true} smooth={true} activeClass={CurrentMenuAfterClass} className={`relative ${isScroll ? "text-gray-900" : "text-gray-100"} hover:text-orange-500 font-inter p-0 xl:py-3 text-xl xl:text-lg`}>
+                                        <Link to={e.link} spy={true} smooth={true} activeClass={CurrentMenuAfterClass} className={`relative ${isScroll ? "xl:text-gray-900" : "xl:text-gray-100"} text-gray-100 hover:text-orange-500 font-inter p-0 xl:py-3 text-xl xl:text-lg`}>
                                             {e.text}
                                         </Link>
                                     </li>
