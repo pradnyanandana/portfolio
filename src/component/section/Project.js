@@ -31,7 +31,7 @@ const Project = (props) => {
     };
 
     useEffect(() => {
-        ScrollTrigger.create({
+        const st = ScrollTrigger.create({
             trigger: "#project",
             start: "-104px",
             scrub: 2,
@@ -45,6 +45,10 @@ const Project = (props) => {
                 document.querySelector("#project .text-heading").classList.remove("text-transparent", "bg-clip-text", "bg-gradient-to-r", "from-gray-700", "via-orange-500", "to-black");
             },
         });
+
+        return () => {
+            st.kill();
+        }
     }, []);
 
     return (
@@ -90,14 +94,14 @@ const List = ({ active }) => {
                 (val, i) =>
                     (active === "all" || val.filter.toLowerCase() === active) && (
                         <div key={`list-${i}`} className="relative w-full lg:w-1/3 px-6 mb-12 transition-all">
-                            <Link to={`/project/${val.id}`}>
-                                <div className="relative group border border-gray-300 transition duration-500 wow animate__ animate__fadeInUp animated visible overflow-hidden cursor-pointer" onClick={() => (window.location.href = `${process.env.PUBLIC_URL}/project/${val.id}`)}>
+                            <Link to={`?project=${val.id}`}>
+                                <div className="relative group border border-gray-300 transition duration-500 wow animate__ animate__fadeInUp animated visible overflow-hidden cursor-pointer">
                                     <span className="absolute z-10 top-6 left-6 inline-block opacity-0 group-hover:opacity-100 text-xs mb-3 py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">{val.filter}</span>
                                     <div className={`relative h-96 ${Background[val.filter.toLowerCase()]}`}>
                                         <img className="h-full w-full object-cover" src={`${process.env.PUBLIC_URL}/images/project/${val.id}/thumbnail.png`} alt="" />
                                     </div>
                                 </div>
-                                <h3 className="mt-3 font-bold font-heading text-base text-center font-inter cursor-pointer hover:text-orange-500" onClick={() => (window.location.href = `${process.env.PUBLIC_URL}/project/${val.id}`)}>
+                                <h3 className="mt-3 font-bold font-heading text-base text-center font-inter cursor-pointer hover:text-orange-500">
                                     {val.title}
                                 </h3>
                             </Link>

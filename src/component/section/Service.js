@@ -9,7 +9,7 @@ const Service = (props) => {
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
-        ScrollTrigger.create({
+        const st = ScrollTrigger.create({
             trigger: "#service",
             start: "-104px",
             scrub: 2,
@@ -23,6 +23,10 @@ const Service = (props) => {
                 document.querySelector("#service .text-heading").classList.remove("text-transparent", "bg-clip-text", "bg-gradient-to-r", "from-gray-700", "via-orange-500", "to-black");
             }
         });
+
+        return () => {
+            st.kill();
+        }
     }, []);
 
     return (

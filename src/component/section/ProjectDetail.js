@@ -1,11 +1,9 @@
 import React, { useCallback, useState } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-import { useParams } from "react-router-dom";
 import { projects } from "../data/project";
 
-const ProjectDetail = (props) => {
-    const { projectId } = useParams();
+const ProjectDetail = ({ project: projectId }) => {
     const project = projects.find((r) => r.id === projectId);
 
     const [currentImage, setCurrentImage] = useState(0);

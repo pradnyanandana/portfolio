@@ -14,7 +14,7 @@ const About = (props) => {
     const techs = ["Python", "Javascript", "PHP", "MySQL", "PostgreSQL", "Laravel", "Express", "Django", "Docker", "React", "WordPress"];
 
     useEffect(() => {
-        ScrollTrigger.create({
+        const st = ScrollTrigger.create({
             trigger: "#about",
             start: "-104px",
             scrub: 2,
@@ -28,6 +28,10 @@ const About = (props) => {
                 document.querySelector("#about .text-heading").classList.remove("text-transparent", "bg-clip-text", "bg-gradient-to-r", "from-gray-700", "via-orange-500", "to-black");
             },
         });
+
+        return () => {
+            st.kill();
+        }
     }, []);
 
     return (
