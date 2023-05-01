@@ -223,7 +223,7 @@ export const projects = [
         url: "https://github.com/pradnyanandana/dtshargarumah/",
         overview: (
             <>
-                <p>Analyze features that affect house prices and make a regression model using the Multi Layer Perceptron.</p>
+                <p>As part of my participation in the Digital Talent Scholarship program, a Ministry of Communication and Informatics Indonesian Republic initiative aimed at developing digital skills, I completed a final project analyzing features that impact house prices and created a regression model utilizing the Multi Layer Perceptron.</p>
             </>
         ),
         gallery: [

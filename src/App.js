@@ -7,23 +7,25 @@ import Service from "./component/section/Service";
 import Footer from "./component/footer/Footer";
 import Project from "./component/section/Project";
 import Contact from "./component/section/Contact";
+import ProjectDetail from "./component/section/ProjectDetail";
+import ScrollToTop from "./component/common/ScrollToTop";
 import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
 import "./App.css";
-import { Fragment } from "react/cjs/react.production.min";
-import ProjectDetail from "./component/section/ProjectDetail";
 
 const App = (props) => {
     return (
-        <Fragment>
+        <>
             <PageHelmet pageTitle="Portfolio" />
             <Router>
-                <Switch>
-                    <Route exact path="/portfolio">
-                        <Content />
-                    </Route>
-                </Switch>
+                <ScrollToTop>
+                    <Switch>
+                        <Route exact path="/portfolio">
+                            <Content />
+                        </Route>
+                    </Switch>
+                </ScrollToTop>
             </Router>
-        </Fragment>
+        </>
     );
 };
 

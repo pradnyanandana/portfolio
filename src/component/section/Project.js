@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Link } from "react-router-dom";
 import { projects } from "../data/project";
@@ -89,7 +89,7 @@ const Project = (props) => {
 
 const List = ({ active }) => {
     return (
-        <Fragment>
+        <>
             {projects.map(
                 (val, i) =>
                     (active === "all" || val.filter.toLowerCase() === active) && (
@@ -108,7 +108,7 @@ const List = ({ active }) => {
                         </div>
                     )
             )}
-        </Fragment>
+        </>
     );
 };
 
