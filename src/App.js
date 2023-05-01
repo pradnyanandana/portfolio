@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PageHelmet from "./component/common/Helmet";
 import Header from "./component/header/Header";
 import Hero from "./component/section/Hero";
@@ -7,19 +7,32 @@ import Service from "./component/section/Service";
 import Footer from "./component/footer/Footer";
 import Project from "./component/section/Project";
 import Contact from "./component/section/Contact";
+import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import "./App.css";
+import { Fragment } from "react/cjs/react.production.min";
+import ProjectDetail from "./component/section/ProjectDetail";
 
 const App = (props) => {
     return (
         <Fragment>
             <PageHelmet pageTitle="Portfolio" />
-            <Header />
-            <Hero />
-            <About />
-            <Service />
-            <Project />
-            <Contact />
-            <Footer />
+            <Router>
+                <Header />
+                <Switch>
+                    <Route exact path="/portfolio" component={() => <Redirect to="/portfolio/home" />} />
+                    <Route exact path="/portfolio/home">
+                        <Hero />
+                        <About />
+                        <Service />
+                        <Project />
+                    </Route>
+                    <Route path="/portfolio/project/:projectId">
+                        <ProjectDetail />
+                    </Route>
+                </Switch>
+                <Contact />
+                <Footer />
+            </Router>
         </Fragment>
     );
 };

@@ -2,20 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-/* #about {
-    height: calc(500vh - 25rem - 360px) !important;
-} */
+@layer base {
+    ul.list {
+        padding-left: 25px;
+        list-style-type: disc;
+    }
 
-#about .radius-for-skewed {
-    height: calc(100% - 5rem - 72px);
-}
+    #project-detail-body p,
+    #project-detail-body li {
+        font-family: Inter, sans-serif;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        color: rgba(17, 24, 39, 1);
+        text-align: justify;
+    }
 
-#project-popup > div::-webkit-scrollbar {
-    width: 1em;
-}
+    #project-detail-body p:not(:last-child),
+    #project-detail-body li:not(:last-child) {
+        margin-bottom: 0.9rem;
+    }
 
-@media screen and (min-width: 1024px) {
     #about .radius-for-skewed {
-        height: calc(100% - 5rem - 104px);
+        height: calc(100% - 5rem - 72px);
+    }
+
+    #project-popup > div::-webkit-scrollbar {
+        width: 1em;
+    }
+
+    .react-images__view-image {
+        margin: 0 auto;
+    }
+
+    .react-photo-gallery--gallery img {
+        object-fit: cover;
+        border-width: 1px;
+        border-color: rgba(209, 213, 219, 1);
+    }
+
+    @media screen and (min-width: 1024px) {
+        #about .radius-for-skewed {
+            height: calc(100% - 5rem - 104px);
+        }
+    }
+
+    .icon-scroll {
+        width: 20px;
+        height: 30px;
+        border: 2px solid #bbb;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        position: relative;
+        box-shadow: 3px 3px 5px -5px #000;
+    }
+
+    .icon-scroll::before {
+        content: "";
+        width: 4px;
+        height: 10px;
+        background: #eee;
+        border-radius: 2px;
+        margin-top: 5px;
+    }
+
+    .icon-scroll::after {
+        content: "";
+        width: 4px;
+        height: 3px;
+        background-color: #bbb;
+        position: absolute;
+        display: block;
+        animation: scroll ease 1s infinite;
+    }
+
+    @keyframes scroll {
+        from {
+            top: 5px;
+        }
+        to {
+            top: 18px;
+        }
+        100% {
+            opacity: 0;
+        }
     }
 }

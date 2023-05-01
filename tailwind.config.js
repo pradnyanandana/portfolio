@@ -42,6 +42,9 @@ module.exports = {
             fontFamily: {
                 rubik: ["Rubik", "sans-serif"],
                 roboto: ["Roboto", "sans-serif"],
+                worksans: ["Work Sans", "sans-serif"],
+                inter: ["Inter", "sans-serif"],
+                playfair: ["Playfair Display", "sans-serif"],
             },
         },
     },
@@ -205,6 +208,8 @@ module.exports = {
                     return `.${e(`after${separator}${className}`)}::after`;
                 });
             });
+            addVariant("child-p", "& p");
+            addVariant("child-u", "& u");
         }),
         plugin(({ addUtilities }) => {
             const contentUtilities = {

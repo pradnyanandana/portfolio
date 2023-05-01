@@ -18,18 +18,18 @@ const rotatingText = ["Web", "Backend", "WordPress"]
 
 const Hero = (props) => {
     return (
-        <section id="hero" className="hero-3 h-screen relative">
+        <section id="hero" className="hero-3 h-screen relative bg-gray-900">
             <div className="container h-full px-2 md:px-4 mx-auto">
                 <div className="flex h-full flex-col-reverse justify-center sm:flex-row items-center -mx-3">
                     <div className="w-full sm:w-2/5 px-3">
-                        <div className="max-w-lg sm:max-w-md mx-auto sm:mx-0 mb-8 text-center sm:text-left">
-                            <h2 className="text-3xl xl:text-6xl mb-4 leading-tight xl:leading-tight font-bold font-rubik wow animate__ animate__fadeIn animated visible">
-                                Hi, I'm Pradnya. <br/>A Professional <TextLoop>{rotatingText.map((text, index) => (<span key={`rotating-text-${index}`} className="bg-orange-500 rounded-xl text-white px-3">{text}</span>))}</TextLoop> Developer.
+                        <div className="sm:mx-0 sm:mb-8 text-center sm:text-left">
+                            <h2 className="text-3xl text-gray-100 xl:text-6xl leading-tight xl:leading-tight font-extrabold font-worksans wow animate__ animate__fadeIn animated visible">
+                                Hi, I'm Pradnya. <br/>A Professional <TextLoop>{rotatingText.map((text, index) => (<span key={`rotating-text-${index}`} className="bg-orange-500 font-bold rounded-xl text-white px-3">{text}</span>))}</TextLoop> Developer.
                             </h2>
                         </div>
                     </div>
                     <div className="relative group w-full sm:w-3/5 px-3 mb-12 sm:mb-0">
-                        <div className="flex items-center justify-end">
+                        <div className="flex items-center justify-end mx-5">
                             <Lottie 
                                 options={defaultOptions}
                                 height={"auto"}
@@ -37,7 +37,7 @@ const Hero = (props) => {
                                 style={{marginLeft: "auto", marginRight: 0}}
                             />
                         </div>
-                        <p className="absolute transform bottom-0 left-1/2 -translate-x-2/4 hidden group-hover:block text-center">Animation by <a className="text-orange-500 hover:text-gray-500 cursor-pointer" href="https://lottiefiles.com/75296-developer-01-whoooa" target="_blank">Greg Dlubacz</a></p>
+                        {/* <p className="absolute transform bottom-0 left-1/2 -translate-x-2/4 hidden group-hover:block text-center">Animation by <a className="text-orange-500 hover:text-gray-500 cursor-pointer" href="#" target="_blank">John Doe</a></p> */}
                     </div>
                 </div>
             </div>
@@ -45,8 +45,8 @@ const Hero = (props) => {
                 to="about" 
                 spy={true} 
                 smooth={true} 
-                className="block w-full absolute bottom-0 left-0 text-lg cursor-pointer animate-bounce">
-                <BsChevronDoubleDown className="mx-auto mb-16 sm:mb-8" size={24}/>
+                className="block w-full absolute bottom-5 left-0 text-lg text-gray-100 hover:text-gray-500 cursor-pointer animate-bounce">
+                <div class="icon-scroll"></div>
             </Link>
         </section>
     );
