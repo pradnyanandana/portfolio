@@ -81,7 +81,7 @@ const Header = ({ project }) => {
                             )}
                         </a>
                     </div>
-                    <div className={`hamburger-menu block xl:hidden ${isScroll ? "bg-gray-900" : "bg-orange-500"} rounded-xl ml-3 xs:ml-5`} onClick={ToggleMenu} style={project ? {} : { height: "48px", width: "48px" }}>
+                    <div className={`hamburger-menu block xl:hidden ${isScroll ? "bg-gray-900" : "bg-orange-500"} rounded-xl ml-3 xs:ml-5`} onClick={ToggleMenu} style={project ?  { height: "48px", width: "48px" } : {}}>
                         <span className={`text-lg text-white ${!!project && "flex h-full justify-center items-center"}`}>{project ? <RiArrowGoBackLine size={20} onClick={backHome} /> : <Hamburger size={20} distance="sm" toggled={openMenu} />}</span>
                     </div>
                 </div>
