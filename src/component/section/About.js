@@ -61,7 +61,7 @@ const About = (props) => {
                                 </div>
                                 <div className="mx-auto lg:mx-0">
                                     <div className="text-center lg:text-left">
-                                        <a href="https://drive.google.com/file/d/1H0bhGFEqcYsEUaZxMv5ZZ66B1A1LhR5l/view?usp=sharing" target={"_blank"} className="tracking-wide hover-up-2 block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-base text-white text-center font-inter leading-none bg-orange-500 hover:bg-yellow-600 rounded-full wow animate__ animate__fadeInUp animated visible" rel="noreferrer">
+                                        <a href="https://drive.google.com/file/d/1dYBRYeBNoTVCmgHYCoIxWLvEAheJMgGO/view?usp=sharing" target={"_blank"} className="tracking-wide hover-up-2 block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-base text-white text-center font-inter leading-none bg-orange-500 hover:bg-yellow-600 rounded-full wow animate__ animate__fadeInUp animated visible" rel="noreferrer">
                                             Download My CV
                                         </a>
                                     </div>
