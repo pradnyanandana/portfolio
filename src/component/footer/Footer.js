@@ -6,7 +6,7 @@ const Footer = (props) => {
             <div className="container mx-auto px-2">
                 <div className="lg:flex lg:items-center lg:justify-between">
                     <p className="text-sm text-white md:mt-0 md:order-1 font-inter text-gray-100 text-center">
-                        ©2023 Pradnyanandana. All rights reserved.
+                        ©{new Date().getFullYear()} Pradnyanandana. All rights reserved.
                     </p>
                 </div>
             </div>

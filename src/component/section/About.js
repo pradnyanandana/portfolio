@@ -46,7 +46,7 @@ const About = (props) => {
                                 <span className="inline-block text-xs py-1 px-3 text-blue-500 font-inter bg-blue-100 rounded-xl wow animate__ animate__fadeInUp animated visible">About Me</span>
                                     <h2 className="mx-auto text-3xl xl:text-4xl my-4 font-bold font-worksans wow animate__ animate__fadeInUp animated animated visible text-gray-900">
                                         <span className="text-heading">
-                                            3+ Years of Experience <br />
+                                            {new Date().getFullYear() - 2020}+ Years of Experience <br />
                                         </span>
                                         <span>in Software Development</span>
                                     </h2>
