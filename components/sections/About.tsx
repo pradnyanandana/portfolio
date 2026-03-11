@@ -55,7 +55,7 @@ export default function About() {
                     <span>in Software Development</span>
                   </h2>
                   <p className="text-base font-inter text-gray-900">
-                    As a software developer with focus on PHP, JavaScript, and Python. My main expertise is creating apps, especially web apps. I&apos;m also an eager learner and adaptive to the latest technologies.
+                    As a software developer with focus on web and frontend development. My main expertise is building responsive and performant web applications using modern JavaScript frameworks. I&apos;m also an eager learner and adaptive to the latest technologies.
                   </p>
                 </div>
                 <div className="mx-auto mb-6 lg:mx-0">

@@ -63,9 +63,9 @@ export default function Service() {
               <div className="text-blue-700-transparent inline-block rounded-full mx-auto mb-4 bg-white">
                 <CgDatabase className="w-14 h-14 mx-auto p-3" size={32} />
               </div>
-              <h3 className="mb-5 font-bold font-heading text-2xl font-inter">Backend Development</h3>
+              <h3 className="mb-5 font-bold font-heading text-2xl font-inter">Frontend Development</h3>
               <p className="text-base font-inter text-gray-900">
-                I&apos;m a back-end developer who expert in server-side programming languages such as PHP, Node.js, and Python. I&apos;ve built several services such as API and data scrapper.
+                I&apos;m a frontend developer with strong expertise in modern JavaScript frameworks and UI technologies. I build performant, accessible, and visually polished user interfaces.
               </p>
             </div>
           </div>

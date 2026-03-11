@@ -10,11 +10,11 @@ export const metadata: Metadata = {
     template: "%s | Pradnyanandana Portfolio",
   },
   description:
-    "Pradnyanandana – Web, Backend & WordPress Developer based in Bali, Indonesia. Specializing in PHP, JavaScript, and Python.",
+    "Pradnyanandana – Web, Frontend & WordPress Developer based in Bali, Indonesia. Specializing in PHP, JavaScript, and Python.",
   keywords: [
     "Pradnyanandana",
     "Web Developer",
-    "Backend Developer",
+    "Frontend Developer",
     "WordPress Developer",
     "Bali",
     "Indonesia",
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://pradnyanandana.github.io/portfolio",
     siteName: "Pradnyanandana Portfolio",
-    title: "Pradnyanandana | Web, Backend & WordPress Developer",
+    title: "Pradnyanandana | Web, Frontend & WordPress Developer",
     description:
-      "Pradnyanandana – Web, Backend & WordPress Developer based in Bali, Indonesia.",
+      "Pradnyanandana – Web, Frontend & WordPress Developer based in Bali, Indonesia.",
     images: [
       {
         url: "/images/logo/logo-light-name192.png",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Pradnyanandana | Web, Backend & WordPress Developer",
+    title: "Pradnyanandana | Web, Frontend & WordPress Developer",
     description:
-      "Pradnyanandana – Web, Backend & WordPress Developer based in Bali, Indonesia.",
+      "Pradnyanandana – Web, Frontend & WordPress Developer based in Bali, Indonesia.",
     images: ["/images/logo/logo-light-name192.png"],
   },
   robots: {

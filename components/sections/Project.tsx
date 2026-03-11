@@ -11,7 +11,7 @@ const ActiveClass = "text-white bg-orange-500";
 const Filter = [
   { key: "all", text: "All" },
   { key: "web", text: "Web Development" },
-  { key: "backend", text: "Backend Development" },
+  { key: "backend", text: "Frontend Development" },
   { key: "wordpress", text: "WordPress Development" },
   { key: "other", text: "Others" },
 ];

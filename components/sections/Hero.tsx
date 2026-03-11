@@ -7,7 +7,7 @@ import animationData from "../../public/lottie/hero.json";
 
 const Lottie = dynamic(() => import("react-lottie").then((mod) => mod.default ?? mod), { ssr: false });
 
-const rotatingText = ["Web", "Backend", "WordPress"];
+const rotatingText = ["Web", "Frontend", "WordPress"];
 
 const defaultOptions = {
   loop: true,
