@@ -50,7 +50,7 @@ export default function Header() {
             <Link href="/">
               <img
                 src={isScroll ? "/images/logo/logo-light-name192.png" : "/images/logo/logo-dark-name192.png"}
-                className="h-10 xl:h-16"
+                className="h-8 xl:h-10"
                 alt="Pradnyanandana"
               />
             </Link>
@@ -102,23 +102,27 @@ export default function Header() {
             </ul>
           </div>
           <div className="header-button ml-0 xl:ml-10">
-            <a
-              className={`rn-button hidden ${
-                isProjectPage ? "xl:flex items-center" : "xl:block"
-              } px-5 h-10 ${
-                isScroll ? "bg-gray-900" : "bg-orange-500"
-              } inline-block leading-10 rounded-full relative text-base text-gray-100 font-medium font-inter cursor-pointer`}
-            >
-              {isProjectPage ? (
-                <Link href="/">
-                  <RiArrowGoBackLine size={20} />
-                </Link>
-              ) : (
-                <ScrollLink to="contact" spy={true} smooth={true}>
-                  <span>Contact Me</span>
-                </ScrollLink>
-              )}
-            </a>
+            {isProjectPage ? (
+              <Link
+                href="/"
+                className={`rn-button hidden xl:flex items-center px-5 h-10 ${
+                  isScroll ? "bg-gray-900" : "bg-orange-500"
+                } leading-10 rounded-full relative text-base text-gray-100 font-medium font-inter cursor-pointer`}
+              >
+                <RiArrowGoBackLine size={20} />
+              </Link>
+            ) : (
+              <ScrollLink
+                to="contact"
+                spy={true}
+                smooth={true}
+                className={`rn-button hidden xl:block px-5 h-10 ${
+                  isScroll ? "bg-gray-900" : "bg-orange-500"
+                } inline-block leading-10 rounded-full relative text-base text-gray-100 font-medium font-inter cursor-pointer`}
+              >
+                <span>Contact Me</span>
+              </ScrollLink>
+            )}
           </div>
           <div
             className={`hamburger-menu block xl:hidden ${

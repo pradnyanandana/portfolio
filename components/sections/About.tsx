@@ -65,9 +65,7 @@ export default function About() {
                         key={t}
                         src={`/images/icons/${t.toLowerCase()}.svg`}
                         alt={t}
-                        width={30}
-                        height={30}
-                        style={{ width: 30, height: "auto" }}
+                        style={{ width: 30, height: 30 }}
                       />
                     ))}
                   </div>
@@ -104,20 +102,18 @@ export default function About() {
 
 function TechStack() {
   return (
-    <div className="grid w-full grid-cols-4 gap-y-10">
+    <div className="grid w-full grid-cols-4 gap-8">
       {techs.map((t) => (
         <div
           key={t}
-          className="group relative bg-gray-50 border border-gray-100 rounded-full flex items-center justify-center w-min p-5 cursor-pointer"
+          className="group relative bg-gray-50 border border-gray-100 rounded-full flex items-center justify-center w-20 h-20 cursor-pointer"
         >
           <img
             src={`/images/icons/${t.toLowerCase()}.svg`}
             alt={t}
-            width={40}
-            height={40}
-            style={{ width: 40, height: "auto" }}
+            style={{ width: 40, height: 40 }}
           />
-          <span className="absolute top-full mt-2 text-sm font-inter opacity-0 group-hover:opacity-100">
+          <span className="absolute top-full mt-2 text-sm font-inter opacity-0 group-hover:opacity-100 whitespace-nowrap">
             {t}
           </span>
         </div>
