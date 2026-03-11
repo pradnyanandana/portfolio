@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { Link } from "react-scroll";
-import animationData from "../../src/lottie/hero.json";
+import animationData from "../../public/lottie/hero.json";
 
 const Lottie = dynamic(() => import("react-lottie").then((mod) => mod.default ?? mod), { ssr: false });
 
