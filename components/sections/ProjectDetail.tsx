@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import dynamic from "next/dynamic";
 import type { Project } from "@/lib/db/projects";
+import { BASE_PATH } from "@/lib/basePath";
 
 const GalleryViewer = dynamic(() => import("./GalleryViewer"), { ssr: false });
 
@@ -16,7 +17,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
 
   const gallery = project.gallery.map((x) => ({
     ...x,
-    src: `/images/project/${project.id}/${x.path}.png`,
+    src: `${BASE_PATH}/images/project/${project.id}/${x.path}.png`,
   }));
 
   const openLightbox = useCallback(

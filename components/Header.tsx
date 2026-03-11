@@ -7,6 +7,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { RiArrowGoBackLine } from "react-icons/ri";
 import { Spin as Hamburger } from "hamburger-react";
+import { BASE_PATH } from "@/lib/basePath";
 
 const SocialShare = [
   { Social: <FaLinkedinIn size={20} />, link: "https://www.linkedin.com/in/pradnyanandana/" },
@@ -49,7 +50,7 @@ export default function Header() {
           <div className="header-logo block cursor-pointer">
             <Link href="/">
               <img
-                src={isScroll ? "/images/logo/logo-light-name192.png" : "/images/logo/logo-dark-name192.png"}
+                src={isScroll ? `${BASE_PATH}/images/logo/logo-light-name192.png` : `${BASE_PATH}/images/logo/logo-dark-name192.png`}
                 className="h-8 xl:h-10"
                 alt="Pradnyanandana"
               />

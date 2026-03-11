@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
+import { BASE_PATH } from "@/lib/basePath";
 
 const techs = [
   "Python", "Javascript", "PHP", "MySQL", "PostgreSQL",
@@ -63,7 +64,7 @@ export default function About() {
                     {techs.map((t) => (
                       <img
                         key={t}
-                        src={`/images/icons/${t.toLowerCase()}.svg`}
+                        src={`${BASE_PATH}/images/icons/${t.toLowerCase()}.svg`}
                         alt={t}
                         style={{ width: 30, height: 30 }}
                       />
@@ -109,7 +110,7 @@ function TechStack() {
           className="group relative bg-gray-50 border border-gray-100 rounded-full flex items-center justify-center w-20 h-20 cursor-pointer"
         >
           <img
-            src={`/images/icons/${t.toLowerCase()}.svg`}
+            src={`${BASE_PATH}/images/icons/${t.toLowerCase()}.svg`}
             alt={t}
             style={{ width: 40, height: 40 }}
           />

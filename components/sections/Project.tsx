@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
 import type { Project } from "@/lib/db/projects";
+import { BASE_PATH } from "@/lib/basePath";
 
 const ActiveClass = "text-white bg-orange-500";
 
@@ -106,7 +107,7 @@ export default function ProjectSection({ initialProjects }: ProjectProps) {
                   <div className={`relative h-96 ${Background[val.filter.toLowerCase()] ?? ""}`}>
                     <img
                       className="h-full w-full object-cover"
-                      src={`/images/project/${val.id}/thumbnail.png`}
+                      src={`${BASE_PATH}/images/project/${val.id}/thumbnail.png`}
                       alt={val.title}
                     />
                   </div>
