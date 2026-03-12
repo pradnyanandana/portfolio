@@ -7,22 +7,13 @@ import gsap from "gsap";
 import type { Project } from "@/lib/db/projects";
 import { BASE_PATH } from "@/lib/basePath";
 
-const ActiveClass = "text-white bg-orange-500";
-
 const Filter = [
   { key: "all", text: "All" },
-  { key: "web", text: "Web Development" },
-  { key: "backend", text: "Frontend Development" },
-  { key: "wordpress", text: "WordPress Development" },
+  { key: "web", text: "Web" },
+  { key: "backend", text: "Frontend" },
+  { key: "wordpress", text: "WordPress" },
   { key: "other", text: "Others" },
 ];
-
-const Background: Record<string, string> = {
-  web: "bg-blue-100-transparent",
-  backend: "bg-yellow-100-transparent",
-  wordpress: "bg-orange-100-transparent",
-  other: "bg-purple-100-transparent",
-};
 
 interface ProjectProps {
   initialProjects: Project[];
@@ -32,7 +23,6 @@ export default function ProjectSection({ initialProjects }: ProjectProps) {
   gsap.registerPlugin(ScrollTrigger);
 
   const [active, setActive] = useState("all");
-  // Projects are pre-fetched server-side; optionally re-fetch from API client-side
   const [projects] = useState<Project[]>(initialProjects);
 
   useEffect(() => {
@@ -62,63 +52,71 @@ export default function ProjectSection({ initialProjects }: ProjectProps) {
   );
 
   return (
-    <section id="project" className="pt-16 pb-20">
-      <div className="container px-2 md:px-4 mx-auto text-center sm:text-left">
-        <div className="flex flex-col sm:flex-row sm:items-center mb-8">
-          <div className="w-full w-4/12">
-            <span className="inline-block text-xs py-1 px-3 text-blue-500 font-inter bg-blue-100 rounded-xl">
-              Portfolio
-            </span>
-            <h2 className="mx-auto text-3xl xl:text-4xl font-worksans my-4 font-bold">
-              <span>Some of <br /></span>
-              <span className="text-heading">My Projects</span>
+    <section id="project" className="bg-white py-20 lg:py-32">
+      <div className="container px-4 md:px-8 mx-auto">
+
+        {/* Header */}
+        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
+          <div>
+            <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 rounded-full px-4 py-1.5 mb-6">
+              <span className="text-sm font-medium text-orange-600 font-inter">Portfolio</span>
+            </div>
+            <h2 className="text-3xl xl:text-5xl font-bold font-worksans tracking-tight text-gray-900 leading-tight">
+              Some of My <br />
+              <span className="text-heading">Projects</span>
             </h2>
           </div>
-          <div className="w-full w-8/12 sm:ml-12">
-            <p className="mx-auto text-base lg:text-lg font-inter text-gray-900">
-              These are some sample projects that I have successfully developed; made with various languages and types of applications.
-            </p>
-          </div>
+          <p className="max-w-md text-base lg:text-lg font-inter text-gray-500 leading-relaxed lg:text-right">
+            A selection of projects I&apos;ve built across web, frontend, and WordPress development.
+          </p>
         </div>
-        <div className="project-filters text-center mb-12 rounded-xl md:p-3 md:bg-blue-300-transparent">
-          <ul className="filters block md:flex md:flex-wrap md:justify-around">
-            {Filter.map((val) => (
-              <li key={val.key} className="btn inline-block rounded-full cursor-pointer">
-                <button
-                  className={`block text-base text-center font-inter rounded-3xl py-2 px-4 ${
-                    val.key === active ? ActiveClass : ""
-                  }`}
-                  onClick={() => setActive(val.key)}
-                >
-                  {val.text}
-                </button>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="flex flex-wrap -mx-6 -mb-12">
-          {filtered.map((val, i) => (
-            <div key={`list-${i}`} className="relative w-full lg:w-1/3 px-6 mb-12 transition-all">
-              <Link href={`/projects/${val.id}`}>
-                <div className="relative group border border-gray-300 transition duration-500 overflow-hidden cursor-pointer">
-                  <span className="absolute z-10 top-6 left-6 inline-block opacity-0 group-hover:opacity-100 text-xs mb-3 py-1 px-3 text-blue-500 font-semibold font-roboto bg-blue-100 rounded-xl">
-                    {val.filter}
-                  </span>
-                  <div className={`relative h-96 ${Background[val.filter.toLowerCase()] ?? ""}`}>
-                    <img
-                      className="h-full w-full object-cover"
-                      src={`${BASE_PATH}/images/project/${val.id}/thumbnail.png`}
-                      alt={val.title}
-                    />
-                  </div>
-                </div>
-                <h3 className="mt-3 font-bold font-heading text-base text-center font-inter cursor-pointer hover:text-orange-500">
-                  {val.title}
-                </h3>
-              </Link>
-            </div>
+
+        {/* Filter pills */}
+        <div className="flex flex-wrap gap-2 mb-10">
+          {Filter.map((val) => (
+            <button
+              key={val.key}
+              onClick={() => setActive(val.key)}
+              className={`px-5 py-2 rounded-full text-sm font-medium font-inter transition-all duration-200 ${
+                val.key === active
+                  ? "bg-orange-500 text-white shadow-sm"
+                  : "bg-gray-100 text-gray-500 hover:bg-gray-200"
+              }`}
+            >
+              {val.text}
+            </button>
           ))}
         </div>
+
+        {/* Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filtered.map((val, i) => (
+            <Link key={`list-${i}`} href={`/projects/${val.id}`}>
+              <div className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+                {/* Image */}
+                <div className="relative h-56 overflow-hidden bg-gray-50">
+                  <img
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    src={`${BASE_PATH}/images/project/${val.id}/thumbnail.png`}
+                    alt={val.title}
+                  />
+                  {/* Category badge on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <span className="absolute top-4 left-4 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium font-inter bg-white/90 text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {val.filter}
+                  </span>
+                </div>
+                {/* Title */}
+                <div className="px-5 py-4">
+                  <h3 className="font-semibold font-inter text-gray-900 group-hover:text-orange-500 transition-colors duration-200">
+                    {val.title}
+                  </h3>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+
       </div>
     </section>
   );
