@@ -50,7 +50,7 @@ export default function Header() {
           <div className="header-logo block cursor-pointer">
             <Link href="/">
               <img
-                src={isScroll ? `${BASE_PATH}/images/logo/logo-light-name192.png` : `${BASE_PATH}/images/logo/logo-dark-name192.png`}
+                src={`${BASE_PATH}/images/logo/logo-light-name192.png`}
                 className="h-8 xl:h-10"
                 alt="Pradnyanandana"
               />
@@ -73,10 +73,11 @@ export default function Header() {
                       to={e.link}
                       spy={true}
                       smooth={true}
+                      duration={500}
+                      offset={-80}
                       activeClass={CurrentMenuAfterClass}
-                      className={`relative ${
-                        isScroll ? "xl:text-gray-900" : "xl:text-gray-100"
-                      } text-gray-100 hover:text-orange-500 font-inter p-0 xl:py-3 text-xl xl:text-lg`}
+                      className={`relative xl:text-gray-900 text-gray-100 hover:text-orange-500 font-inter p-0 xl:py-3 text-xl xl:text-lg`}
+                      onClick={() => setOpenMenu(false)}
                     >
                       {e.text}
                     </ScrollLink>
@@ -91,9 +92,7 @@ export default function Header() {
               {SocialShare.map((val, i) => (
                 <li
                   key={i}
-                  className={`m-2 text-xl ${
-                    isScroll ? "text-gray-900" : "text-gray-100"
-                  } hover:text-orange-500 xl:m-3`}
+                  className={`m-2 text-xl text-gray-900 hover:text-orange-500 xl:m-3`}
                 >
                   <a href={val.link} target="_blank" rel="noreferrer">
                     {val.Social}
@@ -117,6 +116,8 @@ export default function Header() {
                 to="contact"
                 spy={true}
                 smooth={true}
+                duration={500}
+                offset={-80}
                 className={`rn-button hidden xl:block px-5 h-10 ${
                   isScroll ? "bg-gray-900" : "bg-orange-500"
                 } inline-block leading-10 rounded-full relative text-base text-gray-100 font-medium font-inter cursor-pointer`}

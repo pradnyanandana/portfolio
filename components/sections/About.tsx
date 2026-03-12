@@ -6,8 +6,20 @@ import gsap from "gsap";
 import { BASE_PATH } from "@/lib/basePath";
 
 const techs = [
-  "Python", "Javascript", "PHP", "MySQL", "PostgreSQL",
-  "Laravel", "Express", "Django", "Docker", "React", "WordPress",
+  { name: "HTML", file: "html" },
+  { name: "CSS", file: "css" },
+  { name: "JavaScript", file: "javascript" },
+  { name: "TypeScript", file: "typescript" },
+  { name: "React", file: "react" },
+  { name: "Next.js", file: "nextjs" },
+  { name: "Tailwind", file: "tailwind" },
+  { name: "WordPress", file: "wordpress" },
+];
+
+const stats = [
+  { value: `${new Date().getFullYear() - 2020}+`, label: "Years Experience" },
+  { value: "20+", label: "Projects Delivered" },
+  { value: "10+", label: "Happy Clients" },
 ];
 
 export default function About() {
@@ -36,89 +48,71 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="skewed-bottom-right">
-      <div className="bg-indigo-50 pt-20 lg:pt-40 pb-20 radius-for-skewed">
-        <div className="container mx-auto px-2 md:px-4">
-          <div className="flex flex-col lg:flex-row -mx-4">
-            <div className="relative w-full lg:w-1/2 px-4 mb-0 items-center hidden lg:flex">
-              <TechStack />
-            </div>
-            <div className="w-full lg:w-1/2 px-4 mb-0 flex items-center">
-              <div className="w-full text-center lg:text-left">
-                <div className="mx-auto mb-6 lg:mx-0">
-                  <span className="inline-block text-xs py-1 px-3 text-blue-500 font-inter bg-blue-100 rounded-xl">
-                    About Me
+    <section id="about" className="bg-white py-20 lg:py-32">
+      <div className="container mx-auto px-4 md:px-8">
+        <div className="flex flex-col lg:flex-row items-center gap-16">
+
+          {/* Left — Tech Stack */}
+          <div className="flex-1 w-full">
+            <div className="grid grid-cols-4 gap-4">
+              {techs.map((t) => (
+                <div
+                  key={t.name}
+                  className="group flex flex-col items-center justify-center gap-2 p-4 bg-gray-50 border border-gray-100 rounded-2xl hover:bg-white hover:border-gray-200 hover:shadow-md transition-all duration-200 cursor-default"
+                >
+                  <img
+                    src={`${BASE_PATH}/images/icons/${t.file}.svg`}
+                    alt={t.name}
+                    style={{ width: 40, height: 40 }}
+                  />
+                  <span className="text-xs font-medium font-inter text-gray-500 group-hover:text-gray-700 transition-colors">
+                    {t.name}
                   </span>
-                  <h2 className="mx-auto text-3xl xl:text-4xl my-4 font-bold font-worksans text-gray-900">
-                    <span className="text-heading">
-                      {new Date().getFullYear() - 2020}+ Years of Experience <br />
-                    </span>
-                    <span>in Software Development</span>
-                  </h2>
-                  <p className="text-base font-inter text-gray-900">
-                    As a software developer with focus on web and frontend development. My main expertise is building responsive and performant web applications using modern JavaScript frameworks. I&apos;m also an eager learner and adaptive to the latest technologies.
-                  </p>
                 </div>
-                <div className="mx-auto mb-6 lg:mx-0">
-                  <div className="mt-3 flex flex-wrap items-center justify-center gap-3 lg:hidden">
-                    {techs.map((t) => (
-                      <img
-                        key={t}
-                        src={`${BASE_PATH}/images/icons/${t.toLowerCase()}.svg`}
-                        alt={t}
-                        style={{ width: 30, height: 30 }}
-                      />
-                    ))}
-                  </div>
-                </div>
-                <div className="mx-auto lg:mx-0">
-                  <div className="text-center lg:text-left">
-                    <a
-                      href="https://drive.google.com/file/d/1dYBRYeBNoTVCmgHYCoIxWLvEAheJMgGO/view?usp=sharing"
-                      target="_blank"
-                      className="tracking-wide hover-up-2 block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-base text-white text-center font-inter leading-none bg-orange-500 hover:bg-yellow-600 rounded-full"
-                      rel="noreferrer"
-                    >
-                      Download My CV
-                    </a>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
+
+          {/* Right — Bio */}
+          <div className="flex-1 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 rounded-full px-4 py-1.5 mb-6">
+              <span className="text-sm font-medium text-orange-600 font-inter">About Me</span>
+            </div>
+
+            <h2 className="text-3xl xl:text-5xl font-bold font-worksans text-gray-900 leading-tight tracking-tight mb-6">
+              <span className="text-heading">
+                {new Date().getFullYear() - 2020}+ Years of Experience
+              </span>
+              <br />
+              <span className="text-gray-500">in Web Development</span>
+            </h2>
+
+            <p className="text-base lg:text-lg text-gray-500 font-inter leading-relaxed mb-10 max-w-lg mx-auto lg:mx-0">
+              A software developer focused on web and frontend development. My main expertise is building responsive and performant web applications using modern JavaScript frameworks. I&apos;m an eager learner and adaptive to the latest technologies.
+            </p>
+
+            {/* Stats */}
+            <div className="flex justify-center lg:justify-start gap-8 mb-10">
+              {stats.map((s) => (
+                <div key={s.label} className="text-center lg:text-left">
+                  <div className="text-3xl font-extrabold font-worksans text-gray-900">{s.value}</div>
+                  <div className="text-sm text-gray-400 font-inter mt-0.5">{s.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <a
+              href="https://drive.google.com/file/d/1dYBRYeBNoTVCmgHYCoIxWLvEAheJMgGO/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 text-white font-semibold font-inter rounded-full transition-all duration-200 hover:shadow-lg hover:shadow-orange-100 hover:-translate-y-0.5"
+            >
+              Download My CV
+            </a>
+          </div>
+
         </div>
-      </div>
-      <div className="mr-for-radius">
-        <svg
-          className="h-8 md:h-12 lg:h-20 w-full text-indigo-50"
-          viewBox="0 0 10 10"
-          preserveAspectRatio="none"
-        >
-          <polygon fill="currentColor" points="0 0 10 0 0 10"></polygon>
-        </svg>
       </div>
     </section>
-  );
-}
-
-function TechStack() {
-  return (
-    <div className="grid w-full grid-cols-4 gap-8">
-      {techs.map((t) => (
-        <div
-          key={t}
-          className="group relative bg-gray-50 border border-gray-100 rounded-full flex items-center justify-center w-20 h-20 cursor-pointer"
-        >
-          <img
-            src={`${BASE_PATH}/images/icons/${t.toLowerCase()}.svg`}
-            alt={t}
-            style={{ width: 40, height: 40 }}
-          />
-          <span className="absolute top-full mt-2 text-sm font-inter opacity-0 group-hover:opacity-100 whitespace-nowrap">
-            {t}
-          </span>
-        </div>
-      ))}
-    </div>
   );
 }

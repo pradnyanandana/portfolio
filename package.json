@@ -11,13 +11,12 @@
   "dependencies": {
     "gsap": "^3.11.4",
     "hamburger-react": "^2.5.0",
+    "lightgallery": "^2.9.0",
     "next": "^15.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-icons": "^4.3.1",
-    "react-images": "^1.2.0-beta.7",
     "react-lottie": "^1.2.3",
-    "react-photo-gallery": "^8.0.0",
     "react-scroll": "^1.8.4"
   },
   "devDependencies": {
