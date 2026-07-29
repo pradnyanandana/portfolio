@@ -50,7 +50,7 @@ export default function Header() {
           <div className="header-logo block cursor-pointer">
             <Link href="/">
               <img
-                src={`${BASE_PATH}/images/logo/logo-light-name192.png`}
+                src={`${BASE_PATH}/images/logo/logo-light192.png`}
                 className="h-8 xl:h-10"
                 alt="Pradnyanandana"
               />

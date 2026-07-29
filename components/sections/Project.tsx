@@ -1,11 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
 import type { Project } from "@/lib/db/projects";
-import { BASE_PATH } from "@/lib/basePath";
+// import { BASE_PATH } from "@/lib/basePath";
 
 const Filter = [
   { key: "all", text: "All" },
@@ -73,7 +73,7 @@ export default function ProjectSection({ initialProjects }: ProjectProps) {
 
         {/* Filter pills */}
         <div className="flex flex-wrap gap-2 mb-10">
-          {Filter.map((val) => (
+          {/* {Filter.map((val) => (
             <button
               key={val.key}
               onClick={() => setActive(val.key)}
@@ -85,36 +85,37 @@ export default function ProjectSection({ initialProjects }: ProjectProps) {
             >
               {val.text}
             </button>
-          ))}
+          ))} */}
         </div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filtered.map((val, i) => (
+          {/* {filtered.map((val, i) => (
             <Link key={`list-${i}`} href={`/projects/${val.id}`}>
-              <div className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+              <div className="group bg-white border border-gray-100 rounded-2xl overflow-hidden hover:shadow-lg hover:border-gray-200 transition-all duration-300 hover:-translate-y-1 cursor-pointer"> */}
                 {/* Image */}
-                <div className="relative h-56 overflow-hidden bg-gray-50">
+                {/* <div className="relative h-56 overflow-hidden bg-gray-50">
                   <img
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     src={`${BASE_PATH}/images/project/${val.id}/thumbnail.png`}
                     alt={val.title}
-                  />
+                  /> */}
                   {/* Category badge on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  {/* <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <span className="absolute top-4 left-4 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium font-inter bg-white/90 text-gray-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {val.filter}
                   </span>
-                </div>
+                </div> */}
                 {/* Title */}
-                <div className="px-5 py-4">
+                {/* <div className="px-5 py-4">
                   <h3 className="font-semibold font-inter text-gray-900 group-hover:text-orange-500 transition-colors duration-200">
                     {val.title}
                   </h3>
                 </div>
               </div>
             </Link>
-          ))}
+          ))} */}
+          <p>To be updated</p>
         </div>
 
       </div>
